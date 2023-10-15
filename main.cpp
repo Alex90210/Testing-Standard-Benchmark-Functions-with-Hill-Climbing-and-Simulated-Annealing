@@ -107,7 +107,6 @@ std::vector<double> generate_neighbourhood(double interval_start, double interva
 }
 
 double best_improvement(const std::vector<double>& vec, const double& best_solution) {
-
     double solution {best_solution};
     for (auto i : vec)
         if(i < solution)
@@ -119,7 +118,28 @@ double best_improvement(const std::vector<double>& vec, const double& best_solut
 double hill_climbing(double interval_start, double interval_end, double epsilon,
                    unsigned number_of_dimensions, unsigned iterations) {
     double best_solution = 100000000;
-    do {
+    bool is_local_minimum = false;
+    // generating initial solution
+    std::string binary_string = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
+    std::vector<double> initial_vec = decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, binary_string);
+    double initial_solution = de_jong_1(initial_vec);
+
+    bool local_minimum {false};
+    for (size_t i {0}; i < iterations; ++i) {
+        std::vector<double> neighbours = generate_neighbourhood(interval_start, interval_end, epsilon, number_of_dimensions, binary_string);
+        double best_option = best_improvement(neighbours, initial_solution);
+        if (initial_solution == best_option)
+            break;
+        else if (best_option < initial_solution && best_option < best_solution)
+            best_solution = best_option;
+        // ............ 2 loops needed, to be continued
+    }
+
+
+
+
+    return best_solution;
+    /*do {
         bool is_local_minimum = false;
         // generating initial solution
         std::string binary_string = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
@@ -138,9 +158,7 @@ double hill_climbing(double interval_start, double interval_end, double epsilon,
         if (solution < best_solution)
             best_solution = solution;
 
-    } while (iterations > 0);
-
-    return best_solution;
+    } while (iterations > 0);*/
 } // hill climbing probably flawed, my best solution would be in the neighborhood of a random location
 
 int main () {
