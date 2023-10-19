@@ -4,6 +4,7 @@
 #include <cmath>
 #include <random>
 #include <iomanip>
+#include <chrono>
 
 // hill climbing algorithm steps:
 // 1. generate random bitstring
@@ -64,32 +65,46 @@ std::vector<double> decode_binary_string(const double& interval_start, const dou
     return dimensional_values;
 }
 
-double de_jong_1(const std::vector<double>& vec) {
-
+double dejong1_function(const std::vector<double>& vec) {
     double sum {0.0};
     for (auto x : vec)
         sum += x * x;
     return sum;
 }
 
-double best_improvement(const std::vector<double>& vec, const double& best_solution) {
-
-    double solution {best_solution};
-    for (auto i : vec)
-        if(i < solution)
-            solution = i;
-
-    return solution;
+double schwefels_function(const std::vector<double>& vec) {
+    double sum = 0.0;
+    for (auto x : vec) {
+        sum += -x * sin(sqrt(fabs(x)));
+    }
+    return sum;
 }
 
-std::string generate_neighbourhood_and_select(const double& interval_start, const double& interval_end, double epsilon, unsigned number_of_dimensions, const std::string& binary_string) {
+double rastrigins_function(const std::vector<double>& vec) {
+    double sum = 0.0;
+    for (auto x : vec) {
+        sum += x * x - 10 * cos(2 * M_PI * x);
+    }
+    return 10 * vec.size() + sum;
+}
+
+double michalewiczs_function(const std::vector<double>& vec) {
+    double sum = 0.0;
+    for (unsigned i = 0; i < vec.size(); ++i) {
+        sum += sin(vec[i]) * pow(sin((i + 1) * vec[i] * vec[i] / M_PI), 20.0);
+    }
+    return -sum;
+}
+
+std::string generate_neighbourhood_and_select(const double& interval_start, const double& interval_end, double epsilon, unsigned number_of_dimensions,
+                                              const std::string& binary_string, double (*calculate_function)(const std::vector<double>& vec)) {
 
     int index {-1};
-    double best_value {1000000000};
+    double best_value {std::numeric_limits<double>::max()};
     std::string copy_string = binary_string;
     for (int i {0}; i < copy_string.length(); ++i) {
         copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
-        double value = de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, copy_string));
+        double value = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, copy_string));
 
         if (value < best_value) {
             best_value = value;
@@ -98,24 +113,25 @@ std::string generate_neighbourhood_and_select(const double& interval_start, cons
         copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
     }
 
-    if (best_value < de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, copy_string)))
+    if (best_value < calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, copy_string)))
         copy_string[index] = (copy_string[index] == '1') ? '0' : '1';
 
     return copy_string;
 }
 
 double hill_climbing(const double& interval_start, const double& interval_end, double epsilon,
-                     unsigned number_of_dimensions, unsigned iterations) {
+                             unsigned number_of_dimensions, unsigned iterations,
+                             double (*calculate_function)(const std::vector<double>& vec)) {
 
     double best_string_value_solution {1000000000};
     for (size_t i {0}; i < iterations; ++i) {
         bool is_local_minimum {false};
         std::string this_iteration_random_string = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
-        double string_value = de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string));
+        double string_value = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string));
 
         while(!is_local_minimum) {
-            std::string new_string = generate_neighbourhood_and_select(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string);
-            double new_string_value = de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, new_string));
+            std::string new_string = generate_neighbourhood_and_select(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string, calculate_function);
+            double new_string_value = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, new_string));
 
             if (new_string_value < string_value) {
                 this_iteration_random_string = new_string;
@@ -126,22 +142,50 @@ double hill_climbing(const double& interval_start, const double& interval_end, d
 
         }
 
-        if (de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string)) < best_string_value_solution)
-            best_string_value_solution = de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string));
+        if (calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string)) < best_string_value_solution)
+            best_string_value_solution = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string));
     }
     return best_string_value_solution;
 }
 
 int main () {
 
-    double interval_start = -5.12;
-    double interval_end = 5.12;
-    double epsilon = 0.001;
-    unsigned number_of_dimensions = 100;
-    unsigned iterations {1};
+    auto start = std::chrono::high_resolution_clock::now();
 
-    double best = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations);
-    std::cout << std::fixed << std::setprecision(5) << best;
+    double interval_start {-5.12};
+    double interval_end {5.12};
+    double epsilon {0.001};
+    unsigned number_of_dimensions {30};
+    unsigned iterations {1000};
+
+    // must be 0 (for 30 dimensions)
+    double best_d = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, dejong1_function);
+    std::cout << std::fixed << std::setprecision(5) << "De Jung 1: " << best_d << std::endl;
+
+    interval_start = -500;
+    interval_end = 500;
+
+    // must be under -10000 (for 30 dimensions)
+    double best_s = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, schwefels_function);
+    std::cout << std::fixed << std::setprecision(5) << "Schwefel: " << best_s << std::endl;
+
+    interval_start = -5.12;
+    interval_end = 5.12;
+
+    // must be under 30 (for 30 dimensions)
+    double best_r = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, rastrigins_function);
+    std::cout << std::fixed << std::setprecision(5) << "Rastrigin: " << best_r << std::endl;
+
+    interval_start = 0;
+    interval_end = M_PI;
+
+    // must be under -25 (for 30 dimensions)
+    double best_m = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, michalewiczs_function);
+    std::cout << std::fixed << std::setprecision(5) << "Michalewicz: " << best_m << std::endl;
+
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> duration = end - start;
+    std::cout << "Program executed in: " << duration.count() << " seconds." << std::endl;
 
     return 0;
 }
@@ -213,4 +257,13 @@ int main () {
             flipped_string += '1';
     }
     return flipped_string;
+}*/
+
+/*double best_improvement(const std::vector<double>& vec, const double& best_solution) {
+    double solution {best_solution};
+    for (auto i : vec)
+        if(i < solution)
+            solution = i;
+
+    return solution;
 }*/
