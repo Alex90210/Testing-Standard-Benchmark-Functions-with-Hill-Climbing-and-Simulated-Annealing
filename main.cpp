@@ -155,10 +155,10 @@ int main () {
     double interval_start {-5.12};
     double interval_end {5.12};
     double epsilon {0.001};
-    unsigned number_of_dimensions {30};
-    unsigned iterations {1000};
+    unsigned number_of_dimensions {10};
+    unsigned iterations {100};
 
-    // must be 0 (for 30 dimensions)
+    /*// must be 0 (for 30 dimensions)
     double best_d = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, dejong1_function);
     std::cout << std::fixed << std::setprecision(5) << "De Jung 1: " << best_d << std::endl;
 
@@ -174,7 +174,7 @@ int main () {
 
     // must be under 30 (for 30 dimensions)
     double best_r = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, rastrigins_function);
-    std::cout << std::fixed << std::setprecision(5) << "Rastrigin: " << best_r << std::endl;
+    std::cout << std::fixed << std::setprecision(5) << "Rastrigin: " << best_r << std::endl;*/
 
     interval_start = 0;
     interval_end = M_PI;
