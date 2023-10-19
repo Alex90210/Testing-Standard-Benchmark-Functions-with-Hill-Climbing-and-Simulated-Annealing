@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <ctime>
+#include <random>
 #include <cmath>
 
 // hill climbing algorithm steps:
@@ -16,15 +16,19 @@ unsigned D_binary_length(double interval_start, double interval_end, double epsi
 }
 
 std::string generate_binary_string(double interval_start, double interval_end, double epsilon, unsigned number_of_dimensions) {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(0, 1);
+
     unsigned pow_epsilon = 1 / epsilon;
     unsigned dim_number_of_bits = std::ceil(std::log2((interval_end - interval_start) * pow_epsilon));
-    // std::cout << dim_number_of_bits << std::endl;
     unsigned number_of_bits = number_of_dimensions * dim_number_of_bits;
-    srand(time(0));
+
     std::string generated_string;
-    for(size_t i {0}; i < number_of_bits; ++i) {
-        generated_string += (rand() % 2 == 0) ? '1' : '0';
+    for (size_t i = 0; i < number_of_bits; ++i) {
+        generated_string += (dis(gen) == 0) ? '1' : '0';
     }
+
     return generated_string;
 }
 
@@ -55,7 +59,8 @@ std::vector<double> decode_binary_string(double interval_start, double interval_
     return dimensional_values;
 }
 
-std::string flip_bits(const std::string& binary_string) {
+std::string flip_bits(const std::string& binary_string) { // this goes very well with the useless first generate_neighbourhood
+    // function I wrote
     std::string flipped_string;
     for(auto i: binary_string) {
         if (i == '1')
@@ -73,7 +78,95 @@ double de_jong_1(const std::vector<double>& vec) {
     return sum;
 }
 
-std::vector<double> generate_neighbourhood(double interval_start, double interval_end, double epsilon, unsigned number_of_dimensions, const std::string& binary_string) {
+double best_improvement(const std::vector<double>& vec, const double& best_solution) {
+    double solution {best_solution};
+    for (auto i : vec)
+        if(i < solution)
+            solution = i;
+
+    return solution;
+}
+
+std::string generate_neighbourhood_and_select(double interval_start, double interval_end, double epsilon, unsigned number_of_dimensions, const std::string& binary_string) {
+
+    int index {-1};
+    double best_value {1000000000};
+    std::string copy_string = binary_string;
+    for (int i {0}; i < copy_string.length(); ++i) {
+        copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
+        double value = de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, copy_string));
+
+        if (value < best_value) {
+            best_value = value;
+            index = i;
+        }
+        copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
+    }
+
+    if (best_value < de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, copy_string)))
+        copy_string[index] = (copy_string[index] == '1') ? '0' : '1';
+
+    return copy_string;
+}
+
+double hill_climbing(double interval_start, double interval_end, double epsilon,
+                     unsigned number_of_dimensions, unsigned iterations) {
+
+    unsigned current_iteration {0};
+    double best_solution {1000000000};
+    int inner_iterations {10};
+    for (size_t i {0}; i < iterations; ++i) {
+        bool is_local_minimum {false};
+        std::string best_string = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
+        double string_value = de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, best_string));
+        do {
+            std::string new_string = generate_neighbourhood_and_select(interval_start, interval_end, epsilon, number_of_dimensions, best_string);
+            double new_string_value = de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, new_string));
+
+            if (new_string_value < string_value)
+                best_string = new_string;
+            else
+                is_local_minimum = true;
+
+            // ++inner_iterations;
+        } while (!is_local_minimum && inner_iterations < 10);
+
+        if (de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, best_string)) < best_solution)
+            best_solution = de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, best_string));
+    }
+    return best_solution;
+}
+
+int main () {
+
+    double interval_start = -5.12;
+    double interval_end = 5.12;
+    double epsilon = 0.01;
+    unsigned number_of_dimensions = 2;
+    unsigned iterations {1000};
+
+    double best = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations);
+    std::cout << best;
+
+    return 0;
+}
+
+/*double hill_climbing_variant1() {
+    // I could find the optimum for every dimension, this could be better if there is no relationship between these dimensional values
+    for (size_t i {0}; i < number_of_dimensions; ++i) {
+        for (size_t j = size_of_dim * i; j < size_of_dim * (i + 1); ++j) {
+            unsigned string_to_decimal = binary_to_decimal(generated_string, size_of_dim * i, size_of_dim * (i + 1));
+            // double current_value = decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, )
+            double dimensional_value = de_jong_1()
+            if (generated_string[j] == '0')
+                generated_string[j] = '1';
+            else generated_string[j] = '0';
+            // .............
+        }
+    }
+}*/
+
+/*std::vector<double> generate_neighbourhood_initial_attempt(double interval_start, double interval_end, double epsilon, unsigned number_of_dimensions, const std::string& binary_string) {
     std::string flipped_binary_string = flip_bits(binary_string);
     std::vector<double> dim_values = decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, binary_string);
     // the de jung 1 value is needed for calculating the neighbours
@@ -113,101 +206,4 @@ std::vector<double> generate_neighbourhood(double interval_start, double interva
         temporary_vec.clear();
     }
     return neighbourhood_functional_values;
-}
-
-double best_improvement(const std::vector<double>& vec, const double& best_solution) {
-    double solution {best_solution};
-    for (auto i : vec)
-        if(i < solution)
-            solution = i;
-
-    return solution;
-}
-
-double hill_climbing(double interval_start, double interval_end, double epsilon,
-                   unsigned number_of_dimensions, unsigned iterations) {
-    double best_solution = 100000000;
-    bool is_local_minimum = false;
-    // generating initial solution
-    std::string binary_string = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
-    std::vector<double> initial_vec = decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, binary_string);
-    double initial_solution = de_jong_1(initial_vec);
-
-    bool local_minimum {false};
-    for (size_t i {0}; i < iterations; ++i) {
-        std::vector<double> neighbours = generate_neighbourhood(interval_start, interval_end, epsilon, number_of_dimensions, binary_string);
-        double best_option = best_improvement(neighbours, initial_solution);
-        if (initial_solution == best_option)
-            break;
-        else if (best_option < initial_solution && best_option < best_solution)
-            best_solution = best_option;
-        // ............ 2 loops needed, to be continued
-        else if (best_option == 0) {
-            best_option = 0;
-            break;
-        }
-    }
-
-
-
-
-    return best_solution;
-    /*do {
-        bool is_local_minimum = false;
-        // generating initial solution
-        std::string binary_string = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
-        std::vector<double> initial_vec = decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, binary_string);
-        double solution = de_jong_1(initial_vec);
-
-        do {
-            std::vector<double> neighbours = generate_neighbourhood(interval_start, interval_end, epsilon, number_of_dimensions, binary_string);
-            double this_solution = best_improvement(neighbours, solution);
-            if (this_solution < solution)
-                solution = this_solution;
-            else is_local_minimum = true;
-        } while (!is_local_minimum);
-
-        --iterations;
-        if (solution < best_solution)
-            best_solution = solution;
-
-    } while (iterations > 0);*/
-} // hill climbing probably flawed, my best solution would be in the neighborhood of a random location
-
-int main () {
-
-    double interval_start = -5.12;
-    double interval_end = 5.12;
-    double epsilon = 0.01;
-    unsigned number_of_dimensions = 2;
-    unsigned iterations {100};
-
-
-
-
-    double best = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations);
-    std::cout << best;
-
-
-
-
-
-
-
-
-
-    /*std::string test = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
-
-    std::vector<double> vec = decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, test);
-    for (auto i : vec)
-        std::cout << i << " ";
-    std::cout << std::endl << "Valoarea initiala: " << de_jong_1(vec) << std::endl;
-
-    generate_neighbourhood(interval_start, interval_end, epsilon, number_of_dimensions, test);
-    std::vector<double> neighbourhood = generate_neighbourhood(interval_start, interval_end, epsilon, number_of_dimensions, test);
-
-    for(auto i: neighbourhood)
-        std::cout << i << std::endl;*/
-
-    return 0;
-}
+}*/
