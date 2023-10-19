@@ -9,13 +9,13 @@
 // 2. decode bitstring and evaluate it
 // 3. do-while improve strategy (the best improvement, the least improvement, first improvement) on generated neighbourhood
 
-unsigned D_binary_length(double interval_start, double interval_end, double epsilon) {
+unsigned D_binary_length(const double& interval_start, const double& interval_end, double epsilon) {
     unsigned pow_epsilon = 1 / epsilon;
     unsigned dim_number_of_bits = std::ceil(std::log2((interval_end - interval_start) * pow_epsilon));
     return dim_number_of_bits;
 }
 
-std::string generate_binary_string(double interval_start, double interval_end, double epsilon, unsigned number_of_dimensions) {
+std::string generate_binary_string(const double& interval_start, const double& interval_end, double epsilon, unsigned number_of_dimensions) {
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(0, 1);
@@ -41,21 +41,19 @@ unsigned binary_to_decimal(const std::string& binary_string, const size_t& strin
     return decimal_value;
 }
 
-std::vector<double> decode_binary_string(double interval_start, double interval_end, double epsilon, unsigned number_of_dimensions, const std::string& binary_string) {
+std::vector<double> decode_binary_string(const double& interval_start, const double& interval_end, double epsilon, unsigned number_of_dimensions, const std::string& binary_string) {
     // x will be between 0 and 2^n - 1, n is the length of the binary string
     std::vector <double> dimensional_values;
     unsigned dim_length = D_binary_length(interval_start, interval_end, epsilon);
+
     for (size_t i {0}; i < number_of_dimensions; ++i) {
         unsigned xb_value = binary_to_decimal(binary_string, dim_length * i, dim_length * (i + 1));
-        /*for (size_t j = dim_length * i; j < dim_length * (i + 1); ++j) {
-            xb_value *= 2;
-            xb_value += binary_string[j] - '0';
-        }*/
         double x_value = xb_value / (pow(2, dim_length) - 1);
         x_value *= (interval_end - interval_start);
         x_value += interval_start; // x is now between interval_start and interval_end
         dimensional_values.push_back(x_value);
     }
+
     return dimensional_values;
 }
 
@@ -87,7 +85,7 @@ double best_improvement(const std::vector<double>& vec, const double& best_solut
     return solution;
 }
 
-std::string generate_neighbourhood_and_select(double interval_start, double interval_end, double epsilon, unsigned number_of_dimensions, const std::string& binary_string) {
+std::string generate_neighbourhood_and_select(const double& interval_start, const double& interval_end, double epsilon, unsigned number_of_dimensions, const std::string& binary_string) {
 
     int index {-1};
     double best_value {1000000000};
@@ -109,32 +107,36 @@ std::string generate_neighbourhood_and_select(double interval_start, double inte
     return copy_string;
 }
 
-double hill_climbing(double interval_start, double interval_end, double epsilon,
+double hill_climbing(const double& interval_start, const double& interval_end, double epsilon,
                      unsigned number_of_dimensions, unsigned iterations) {
 
     unsigned current_iteration {0};
-    double best_solution {1000000000};
-    int inner_iterations {10};
+    double best_string_value_solution {1000000000};
+    // int inner_iterations {10};
     for (size_t i {0}; i < iterations; ++i) {
         bool is_local_minimum {false};
-        std::string best_string = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
-        double string_value = de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, best_string));
-        do {
-            std::string new_string = generate_neighbourhood_and_select(interval_start, interval_end, epsilon, number_of_dimensions, best_string);
+        std::string this_iteration_random_string = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
+        double string_value = de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string));
+
+        while(!is_local_minimum) {
+            std::string new_string = generate_neighbourhood_and_select(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string);
             double new_string_value = de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, new_string));
 
-            if (new_string_value < string_value)
-                best_string = new_string;
+            if (new_string_value < string_value) {
+                this_iteration_random_string = new_string;
+                string_value = new_string_value;
+                // If the line above is uncommented the algorithm never stops, if it's commented the algorithm outputs the same value
+            }
             else
                 is_local_minimum = true;
 
-            // ++inner_iterations;
-        } while (!is_local_minimum && inner_iterations < 10);
+        }
+        // the generate neighbourhood function might be faulty
 
-        if (de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, best_string)) < best_solution)
-            best_solution = de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, best_string));
+        if (de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string)) < best_string_value_solution)
+            best_string_value_solution = de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string));
     }
-    return best_solution;
+    return best_string_value_solution;
 }
 
 int main () {
@@ -145,6 +147,7 @@ int main () {
     unsigned number_of_dimensions = 2;
     unsigned iterations {1000};
 
+    std::cout << de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions ,"01111111111000000000")) << std::endl;
     double best = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations);
     std::cout << best;
 
