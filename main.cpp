@@ -1,8 +1,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <random>
 #include <cmath>
+#include <random>
+#include <iomanip>
 
 // hill climbing algorithm steps:
 // 1. generate random bitstring
@@ -16,6 +17,7 @@ unsigned D_binary_length(const double& interval_start, const double& interval_en
 }
 
 std::string generate_binary_string(const double& interval_start, const double& interval_end, double epsilon, unsigned number_of_dimensions) {
+
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(0, 1);
@@ -33,22 +35,27 @@ std::string generate_binary_string(const double& interval_start, const double& i
 }
 
 unsigned binary_to_decimal(const std::string& binary_string, const size_t& string_start, const size_t& string_end) {
+
     unsigned decimal_value {0};
     for (size_t i {string_start}; i < string_end; ++i) {
         decimal_value *= 2;
         decimal_value += binary_string[i] - '0';
     }
+
     return decimal_value;
 }
 
 std::vector<double> decode_binary_string(const double& interval_start, const double& interval_end, double epsilon, unsigned number_of_dimensions, const std::string& binary_string) {
+
     // x will be between 0 and 2^n - 1, n is the length of the binary string
     std::vector <double> dimensional_values;
     unsigned dim_length = D_binary_length(interval_start, interval_end, epsilon);
 
     for (size_t i {0}; i < number_of_dimensions; ++i) {
+
         unsigned xb_value = binary_to_decimal(binary_string, dim_length * i, dim_length * (i + 1));
         double x_value = xb_value / (pow(2, dim_length) - 1);
+
         x_value *= (interval_end - interval_start);
         x_value += interval_start; // x is now between interval_start and interval_end
         dimensional_values.push_back(x_value);
@@ -57,19 +64,8 @@ std::vector<double> decode_binary_string(const double& interval_start, const dou
     return dimensional_values;
 }
 
-std::string flip_bits(const std::string& binary_string) { // this goes very well with the useless first generate_neighbourhood
-    // function I wrote
-    std::string flipped_string;
-    for(auto i: binary_string) {
-        if (i == '1')
-            flipped_string += '0';
-        else
-            flipped_string += '1';
-    }
-    return flipped_string;
-}
-
 double de_jong_1(const std::vector<double>& vec) {
+
     double sum {0.0};
     for (auto x : vec)
         sum += x * x;
@@ -77,6 +73,7 @@ double de_jong_1(const std::vector<double>& vec) {
 }
 
 double best_improvement(const std::vector<double>& vec, const double& best_solution) {
+
     double solution {best_solution};
     for (auto i : vec)
         if(i < solution)
@@ -110,9 +107,7 @@ std::string generate_neighbourhood_and_select(const double& interval_start, cons
 double hill_climbing(const double& interval_start, const double& interval_end, double epsilon,
                      unsigned number_of_dimensions, unsigned iterations) {
 
-    unsigned current_iteration {0};
     double best_string_value_solution {1000000000};
-    // int inner_iterations {10};
     for (size_t i {0}; i < iterations; ++i) {
         bool is_local_minimum {false};
         std::string this_iteration_random_string = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
@@ -125,13 +120,11 @@ double hill_climbing(const double& interval_start, const double& interval_end, d
             if (new_string_value < string_value) {
                 this_iteration_random_string = new_string;
                 string_value = new_string_value;
-                // If the line above is uncommented the algorithm never stops, if it's commented the algorithm outputs the same value
             }
             else
                 is_local_minimum = true;
 
         }
-        // the generate neighbourhood function might be faulty
 
         if (de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string)) < best_string_value_solution)
             best_string_value_solution = de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string));
@@ -143,13 +136,12 @@ int main () {
 
     double interval_start = -5.12;
     double interval_end = 5.12;
-    double epsilon = 0.01;
-    unsigned number_of_dimensions = 2;
-    unsigned iterations {1000};
+    double epsilon = 0.001;
+    unsigned number_of_dimensions = 100;
+    unsigned iterations {1};
 
-    std::cout << de_jong_1(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions ,"01111111111000000000")) << std::endl;
     double best = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations);
-    std::cout << best;
+    std::cout << std::fixed << std::setprecision(5) << best;
 
     return 0;
 }
@@ -209,4 +201,16 @@ int main () {
         temporary_vec.clear();
     }
     return neighbourhood_functional_values;
+}*/
+
+/*std::string flip_bits(const std::string& binary_string) { // this goes very well with the useless first generate_neighbourhood
+    // function I wrote
+    std::string flipped_string;
+    for(auto i: binary_string) {
+        if (i == '1')
+            flipped_string += '0';
+        else
+            flipped_string += '1';
+    }
+    return flipped_string;
 }*/
