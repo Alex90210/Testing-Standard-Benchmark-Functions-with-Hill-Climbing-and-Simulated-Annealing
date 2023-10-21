@@ -123,19 +123,22 @@ std::string worst_improvement(const double& interval_start, const double& interv
                              const std::string& binary_string, double string_value,
                              double (*calculate_function)(const std::vector<double>& vec)) {
 
+    // something needs to be fixed here, the function executes way to fast
     int index {-1};
-    double current_worst_but_better {std::numeric_limits<double>::lowest()};
-    double best_value {std::numeric_limits<double>::max()};
+    double current_worst_but_better {-1000000000};
+    int dimensional_length = D_binary_length(interval_start, interval_end, epsilon);
     std::string copy_string = binary_string;
-    for (int i {0}; i < copy_string.length(); ++i) {
-        copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
-        double value = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, copy_string));
+    for (int i {0}; i < number_of_dimensions; ++i) { // this has to skip the least significant bits
+        for (int j {dimensional_length * i}; j < (dimensional_length * (i + 1)) / 2; ++j) {
+            copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
+            double value = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, copy_string));
 
-        if (value < best_value && value > current_worst_but_better) {
-            current_worst_but_better = value;
-            index = i;
+            if (value < string_value && value > current_worst_but_better) {
+                current_worst_but_better = value;
+                index = i;
+            }
+            copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
         }
-        copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
     }
 
     if (current_worst_but_better < calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, copy_string)))
@@ -174,7 +177,7 @@ double hill_climbing(const double& interval_start, const double& interval_end, d
         std::string this_iteration_random_string = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
         double string_value = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string));
 
-        if (mode == "worst improvement") {
+        if (mode == "WI") { // worst improvement
             while(!is_local_minimum) {
 
                 std::string new_string = worst_improvement(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string, string_value, calculate_function);
@@ -187,7 +190,7 @@ double hill_climbing(const double& interval_start, const double& interval_end, d
                 else
                     is_local_minimum = true;
             }
-        } else if (mode == "first improvement") {
+        } else if (mode == "FI") { // first improvement
             while(!is_local_minimum) {
 
                 std::string new_string = first_improvement(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string, string_value, calculate_function);
@@ -200,7 +203,7 @@ double hill_climbing(const double& interval_start, const double& interval_end, d
                 else
                     is_local_minimum = true;
             }
-        } else {
+        } else { // best improvement
             while(!is_local_minimum) {
 
                 std::string new_string = best_improvement(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string, calculate_function);
@@ -221,41 +224,100 @@ double hill_climbing(const double& interval_start, const double& interval_end, d
     return best_string_value_solution;
 }
 
+unsigned get_random_number(unsigned min, unsigned max) {
+    std::random_device rd;
+    std::mt19937 eng(rd());
+
+    std::uniform_int_distribution<> distribution(min, max);
+
+    return distribution(eng);
+}
+
+std::string random_neighbour(const double& interval_start, const double& interval_end, double epsilon, const std::string& binary_string) {
+
+    // at max only one bit should be flipped for every dimension, I don't know how to enforce the interval when flipping multiple bits
+    // what is writen above is not true, the decoding puts the value in the interval, but the solution implemented below might not be the worst idea
+    // I should experiment with multiple flipped bits for each dimension though
+    std::string copy_string = binary_string;
+    unsigned dim_len = D_binary_length(interval_start, interval_end, epsilon);
+    unsigned max_number_of_flipped_bits = ceil(std::log2(binary_string.length()));
+    unsigned random_max = get_random_number(1, max_number_of_flipped_bits);
+
+    unsigned dimensional_counter {0};
+    for (size_t i {0}; i < random_max; ++i) {
+        unsigned random_index = get_random_number(dimensional_counter, binary_string.length());
+        copy_string[random_index] = (copy_string[random_index] == '1') ? '0' : '1';
+        dimensional_counter += dim_len;
+    }
+
+    return copy_string;
+}
+
+/*double simulated_annealing(const double& interval_start, const double& interval_end, double epsilon,
+                           unsigned number_of_dimensions, unsigned iterations, const std::string& mode,
+                           double (*calculate_function)(const std::vector<double>& vec)) {
+
+    std::string random_string = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
+    double random_string_value = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, random_string));
+
+    do {
+        do {
+
+        } while ();
+    } while();
+
+}*/
+
 int main () {
 
     auto start = std::chrono::high_resolution_clock::now();
 
-    std::string mode{"worst improvement"};
+    // there is something wrong in the worst improvement cased
+
+    std::string mode{"WI"};
+    unsigned number_of_dimensions {2};
+    double epsilon {0.01};
+    unsigned iterations {1000};
+    double temperature {1000};
+
     double interval_start {-5.12};
     double interval_end {5.12};
-    double epsilon {0.001};
-    unsigned number_of_dimensions {30};
-    unsigned iterations {100};
+    std::string test = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
+    std::string neighbour = random_neighbour(interval_start, interval_end,epsilon, test);
+    std::cout << test << std::endl;
+    std::cout << neighbour << std::endl;
 
+    /*// De Jong 1
     // must be 0 (for 30 dimensions)
+
+    double interval_start {-5.12};
+    double interval_end {5.12};
     double best_d = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, dejong1_function);
     std::cout << std::fixed << std::setprecision(5) << "De Jung 1: " << best_d << std::endl;
 
+    // Schwefel
+    // must be under -10000 (for 30 dimensions)
+
     interval_start = -500;
     interval_end = 500;
-
-    // must be under -10000 (for 30 dimensions)
     double best_s = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, schwefels_function);
     std::cout << std::fixed << std::setprecision(5) << "Schwefel: " << best_s << std::endl;
 
+    // Rastrigin
+    // must be under -25 (for 30 dimensions)
+
     interval_start = -5.12;
     interval_end = 5.12;
-
-    // must be under 30 (for 30 dimensions)
     double best_r = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, rastrigins_function);
     std::cout << std::fixed << std::setprecision(5) << "Rastrigin: " << best_r << std::endl;
 
+    // Michaleiwcz
+    // must be under -25 (for 30 dimensions)
+
     interval_start = 0;
     interval_end = M_PI;
-
-    // must be under -25 (for 30 dimensions)
     double best_m = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, michalewiczs_function);
-    std::cout << std::fixed << std::setprecision(5) << "Michalewicz: " << best_m << std::endl;
+    std::cout << std::fixed << std::setprecision(5) << "Michalewicz: " << best_m << std::endl;*/
 
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> duration = end - start;
