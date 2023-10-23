@@ -1,10 +1,10 @@
 #include "select_neighbour_strategy.hpp"
 
 std::string best_improvement(const double& interval_start, const double& interval_end, double epsilon, unsigned number_of_dimensions,
-                             const std::string& binary_string, double (*calculate_function)(const std::vector<double>& vec)) {
+                             const std::string& binary_string, double string_value, double (*calculate_function)(const std::vector<double>& vec)) {
 
     int index {-1};
-    double best_value {std::numeric_limits<double>::max()};
+    double best_value {string_value};
     std::string copy_string = binary_string;
     for (int i {0}; i < copy_string.length(); ++i) {
         copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
@@ -24,6 +24,31 @@ std::string best_improvement(const double& interval_start, const double& interva
 }
 
 std::string worst_improvement(const double& interval_start, const double& interval_end, double epsilon, unsigned number_of_dimensions,
+                              const std::string& binary_string, const double& string_value,
+                              double (*calculate_function)(const std::vector<double>& vec)) {
+
+    int index {-1};
+    double best_value {std::numeric_limits<double>::max()};
+    double current_worst_but_better {-1000};
+    std::string copy_string = binary_string;
+    for (int i {0}; i < binary_string.length(); ++i) {
+        copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
+        double value = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, copy_string));
+
+        if (value < string_value && value > current_worst_but_better) {
+            current_worst_but_better = value;
+            index = i;
+        }
+        copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
+    }
+    if (best_value < calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, copy_string)))
+        copy_string[index] = (copy_string[index] == '1') ? '0' : '1';
+
+    return copy_string;
+}
+
+// this is the store nothing way, did not work
+/*std::string worst_improvement(const double& interval_start, const double& interval_end, double epsilon, unsigned number_of_dimensions,
                               const std::string& binary_string, double string_value,
                               double (*calculate_function)(const std::vector<double>& vec)) {
 
@@ -49,7 +74,7 @@ std::string worst_improvement(const double& interval_start, const double& interv
         copy_string[index] = (copy_string[index] == '1') ? '0' : '1';
 
     return copy_string;
-}
+}*/
 
 std::string first_improvement(const double& interval_start, const double& interval_end, double epsilon, unsigned number_of_dimensions,
                               const std::string& binary_string, double string_value,
@@ -57,7 +82,7 @@ std::string first_improvement(const double& interval_start, const double& interv
 
     double best_value {string_value};
     std::string copy_string = binary_string;
-    for (int i {0}; i < copy_string.length(); ++i) {
+    for (unsigned i = get_random_unsigned(0, copy_string.length()); i < copy_string.length(); ++i) {
         copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
         double value = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, copy_string));
 

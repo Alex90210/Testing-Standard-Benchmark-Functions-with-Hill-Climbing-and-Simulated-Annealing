@@ -9,22 +9,19 @@ int main () {
     // there is something wrong in the worst improvement cased
 
     std::string mode{"WI"};
-    unsigned number_of_dimensions {2};
-    double epsilon {0.001};
-    unsigned iterations {100};
+    unsigned number_of_dimensions {30};
+    double epsilon {0.01};
+    unsigned iterations {10};
     double temperature {100};
 
     double interval_start {-5.12};
     double interval_end {5.12};
 
-    double sim_ann = simulated_annealing(interval_start, interval_end, epsilon,number_of_dimensions, iterations, temperature, rastrigins_function);
+    double sim_ann = simulated_annealing(interval_start, interval_end, epsilon,number_of_dimensions, iterations, temperature,
+                                         dejong1_function);
     std::cout << "simulated annealing: " << sim_ann << std::endl;
-/*    std::string test = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
-    std::string neighbour = random_neighbour(interval_start, interval_end,epsilon, test);
-    std::cout << test << std::endl;
-    std::cout << neighbour << std::endl;
 
-    // De Jong 1
+    /*// De Jong 1
     // must be 0 (for 30 dimensions)
 
     double best_d = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, dejong1_function);
