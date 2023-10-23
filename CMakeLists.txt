@@ -12,3 +12,4 @@ add_executable(Homework1 main.cpp
         select_neighbour_strategy.cpp
         algorithms.hpp
         algorithms.cpp)
+

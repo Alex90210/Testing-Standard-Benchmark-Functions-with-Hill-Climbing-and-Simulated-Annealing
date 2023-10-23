@@ -10,13 +10,16 @@ int main () {
 
     std::string mode{"WI"};
     unsigned number_of_dimensions {2};
-    double epsilon {0.01};
-    unsigned iterations {1000};
-    double temperature {1000};
+    double epsilon {0.001};
+    unsigned iterations {100};
+    double temperature {100};
 
     double interval_start {-5.12};
     double interval_end {5.12};
-    std::string test = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
+
+    double sim_ann = simulated_annealing(interval_start, interval_end, epsilon,number_of_dimensions, iterations, temperature, rastrigins_function);
+    std::cout << "simulated annealing: " << sim_ann << std::endl;
+/*    std::string test = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
     std::string neighbour = random_neighbour(interval_start, interval_end,epsilon, test);
     std::cout << test << std::endl;
     std::cout << neighbour << std::endl;
@@ -24,8 +27,6 @@ int main () {
     // De Jong 1
     // must be 0 (for 30 dimensions)
 
-    interval_start = -5.12;
-    interval_end = 5.12;
     double best_d = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, dejong1_function);
     std::cout << std::fixed << std::setprecision(5) << "De Jung 1: " << best_d << std::endl;
 
@@ -51,7 +52,7 @@ int main () {
     interval_start = 0;
     interval_end = M_PI;
     double best_m = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, michalewiczs_function);
-    std::cout << std::fixed << std::setprecision(5) << "Michalewicz: " << best_m << std::endl;
+    std::cout << std::fixed << std::setprecision(5) << "Michalewicz: " << best_m << std::endl;*/
 
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> duration = end - start;

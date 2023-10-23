@@ -1,7 +1,6 @@
 #ifndef BINARY_OPERATIONS_HPP
 #define BINARY_OPERATIONS_HPP
 
-#include "math_functions.hpp"
 #include <iostream>
 #include <string>
 #include <random>

@@ -2,7 +2,9 @@
 #define SELECT_NEIGHBOUR_STRATEGY_HPP
 
 #include "binary_operations.hpp"
-/*#include "math_functions.hpp"*/
+#include "math_functions.hpp"
+#include <string>
+#include <vector>
 
 std::string best_improvement(const double& interval_start, const double& interval_end, double epsilon, unsigned number_of_dimensions,
                              const std::string& binary_string, double (*calculate_function)(const std::vector<double>& vec));
