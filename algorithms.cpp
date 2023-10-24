@@ -65,7 +65,7 @@ double hill_climbing(const double& interval_start, const double& interval_end, d
                      unsigned number_of_dimensions, unsigned iterations, const std::string& mode,
                      double (*calculate_function)(const std::vector<double>& vec)) {
 
-    double best_string_value_solution {1000000000};
+    double best_string_value_solution {10000};
     for (size_t i {0}; i < iterations; ++i) {
         bool is_local_minimum {false};
         std::string this_iteration_random_string = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
@@ -111,9 +111,9 @@ double hill_climbing(const double& interval_start, const double& interval_end, d
                     is_local_minimum = true;
             }
         }
-
-        if (calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string)) < best_string_value_solution)
-            best_string_value_solution = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string));
+        double solution = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, this_iteration_random_string));
+        if (solution < best_string_value_solution)
+            best_string_value_solution = solution;
     }
     return best_string_value_solution;
 }
@@ -123,21 +123,23 @@ double simulated_annealing(const double& interval_start, const double& interval_
                            double (*calculate_function)(const std::vector<double>& vec)) {
 
     // ????????????????????
-    const double cooling_rate {0.001};
+    const double cooling_rate {0.95};
     double current_temperature {temperature};
     double best {1000000};
     unsigned ii {0};
     while (ii < iterations) {
+
         std::string best_binary_string = generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions);
         double best_value = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, best_binary_string));
+
         while (current_temperature > 0.00001) {
+
             bool no_solution {false};
-            unsigned index {0};
+
             while (!no_solution) {
+
                 // std::string random_neighbour = first_improvement(interval_start, interval_end, epsilon, number_of_dimensions, best_binary_string, best_value, calculate_function);
                 std::string random_neighbour = next_neighbour(best_binary_string);
-
-
                 double random_neighbour_value = calculate_function(
                         decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions,
                                              random_neighbour));
@@ -149,7 +151,7 @@ double simulated_annealing(const double& interval_start, const double& interval_
                     double delta = random_neighbour_value - best_value;
                     // acc probability is faulty
                     /*double acceptance_probability = 1 / std::pow(10, delta / current_temperature);*/
-                    double acceptance_probability = exp(-delta / temperature);
+                    double acceptance_probability = exp(-delta / current_temperature);
                     if (get_random_double(0, 1) < acceptance_probability) {
                         best_binary_string = random_neighbour;
                         best_value = random_neighbour_value;
@@ -157,7 +159,7 @@ double simulated_annealing(const double& interval_start, const double& interval_
                         no_solution = true;
                 }
             }
-            current_temperature *= temperature / (1 + cooling_rate * ii);;
+            current_temperature *= cooling_rate;
         }
         if (best_value < best)
             best = best_value;

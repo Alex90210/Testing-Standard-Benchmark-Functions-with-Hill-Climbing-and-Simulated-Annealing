@@ -4,59 +4,56 @@
 
 int main () {
 
-    auto start = std::chrono::high_resolution_clock::now();
-
-    // there is something wrong in the worst improvement cased
-
     std::string mode{"WI"};
     unsigned number_of_dimensions {30};
-    double epsilon {0.01};
-    unsigned iterations {10};
-    double temperature {100};
-
+    double epsilon {0.001};
+    unsigned iterations {1000};
     double interval_start {-5.12};
     double interval_end {5.12};
 
-    double sim_ann = simulated_annealing(interval_start, interval_end, epsilon,number_of_dimensions, iterations, temperature,
-                                         dejong1_function);
-    std::cout << "simulated annealing: " << sim_ann << std::endl;
+    double temperature {100};
 
-    /*// De Jong 1
+    // De Jong 1
     // must be 0 (for 30 dimensions)
-
-    double best_d = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, dejong1_function);
+    auto start = std::chrono::high_resolution_clock::now();
+    double best_d = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, rastrigins_function);
     std::cout << std::fixed << std::setprecision(5) << "De Jung 1: " << best_d << std::endl;
 
-    // Schwefel
-    // must be under -10000 (for 30 dimensions)
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> duration = end - start;
+    std::cout << "Program executed in: " << duration.count() << " seconds." << std::endl;
 
+    std::string s {"101001101110000100000000111100111001001001111000000110001101010001000000100010111010101110001010111010010010011001100000110110010011001011000010100100001000001001000101110100110001101111100001111001000111100001111100001110011010111000100011010100011010100010000110000110001101110011110110111101100011000011011100011111100000000010001000001001101010100001001010100101000100001111000011001100110010111000000001011011101100"};
+    std::cout << dejong1_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, s)) << std::endl;
+
+    return 0;
+}
+
+
+  // main code
+     // Schwefel
+    // must be under -10000 (for 30 dimensions)
+/*
     interval_start = -500;
     interval_end = 500;
     double best_s = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, schwefels_function);
     std::cout << std::fixed << std::setprecision(5) << "Schwefel: " << best_s << std::endl;
-
+*/
     // Rastrigin
     // must be under -25 (for 30 dimensions)
 
-    interval_start = -5.12;
+    /*interval_start = -5.12;
     interval_end = 5.12;
-    double best_r = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, rastrigins_function);
-    std::cout << std::fixed << std::setprecision(5) << "Rastrigin: " << best_r << std::endl;
+    float best_r = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, rastrigins_function);
+    std::cout << std::fixed << std::setprecision(5) << "Rastrigin: " << best_r << std::endl;*/
 
-    // Michaleiwcz
+    /*// Michaleiwcz
     // must be under -25 (for 30 dimensions)
 
     interval_start = 0;
     interval_end = M_PI;
     double best_m = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, michalewiczs_function);
     std::cout << std::fixed << std::setprecision(5) << "Michalewicz: " << best_m << std::endl;*/
-
-    auto end = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double> duration = end - start;
-    std::cout << "Program executed in: " << duration.count() << " seconds." << std::endl;
-
-    return 0;
-}
 
 /*double hill_climbing_variant1() {
     // I could find the optimum for every dimension, this could be better if there is no relationship between these dimensional values
