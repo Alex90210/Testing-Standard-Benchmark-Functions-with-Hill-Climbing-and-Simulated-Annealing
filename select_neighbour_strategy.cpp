@@ -31,7 +31,7 @@ std::string best_improvement(const double& interval_start, const double& interva
 
     for (int i {0}; i < copy_string.length(); ++i) {
 
-        copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
+        copy_string[i] = (copy_string[i] == '1') ? '0' : '1'; // this could slow the process a lot, maybe a vector of bool values was a better idea
         double value = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, copy_string));
 
         if (value < best_value) {
@@ -62,6 +62,7 @@ std::string worst_improvement(const double& interval_start, const double& interv
     std::vector<double> value_vec;
     std::vector<std::string> string_vec;
     std::map<double, std::string> index_map;
+
     for (int i {0}; i < binary_string.length(); ++i) {
 
         copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
@@ -72,6 +73,7 @@ std::string worst_improvement(const double& interval_start, const double& interv
 
         copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
     }
+
     // mapping
     for (size_t i = 0; i < value_vec.size(); ++i) {
         index_map[value_vec[i]] = string_vec[i];

@@ -4,27 +4,31 @@
 
 int main () {
 
-    std::string mode{"WI"};
+    std::string mode {"BI"};
     unsigned number_of_dimensions {30};
     double epsilon {0.001};
-    unsigned iterations {1000};
+    unsigned iterations {100};
     double interval_start {-5.12};
     double interval_end {5.12};
 
     double temperature {100};
 
-    // De Jong 1
-    // must be 0 (for 30 dimensions)
     auto start = std::chrono::high_resolution_clock::now();
-    double best_d = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, rastrigins_function);
-    std::cout << std::fixed << std::setprecision(5) << "De Jung 1: " << best_d << std::endl;
+
+
+    interval_start = -500;
+    interval_end = 500;
+    double sim = simulated_annealing_with_linear_decay(interval_start, interval_end, epsilon, number_of_dimensions, iterations, temperature, schwefels_function);
+    std::cout << "Simulated annealer: " << sim << std::endl;
+    double hill = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, schwefels_function);
+    std::cout << "Hill climber: " << hill << std::endl;
+
+    double random_point = rastrigins_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions)));
+    std::cout << "random rastrigin value: " << random_point << std::endl;
 
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> duration = end - start;
     std::cout << "Program executed in: " << duration.count() << " seconds." << std::endl;
-
-    std::string s {"101001101110000100000000111100111001001001111000000110001101010001000000100010111010101110001010111010010010011001100000110110010011001011000010100100001000001001000101110100110001101111100001111001000111100001111100001110011010111000100011010100011010100010000110000110001101110011110110111101100011000011011100011111100000000010001000001001101010100001001010100101000100001111000011001100110010111000000001011011101100"};
-    std::cout << dejong1_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, s)) << std::endl;
 
     return 0;
 }
