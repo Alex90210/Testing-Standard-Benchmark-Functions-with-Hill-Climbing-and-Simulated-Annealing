@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <random>
+#include <chrono>
 
 unsigned D_binary_length(const double& interval_start, const double& interval_end, double epsilon);
 unsigned binary_to_decimal(const std::string& binary_string, const size_t& string_start, const size_t& string_end);

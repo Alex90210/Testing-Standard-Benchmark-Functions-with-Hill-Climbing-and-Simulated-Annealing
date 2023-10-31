@@ -180,7 +180,6 @@ double simulated_annealing_adaptive(const double& interval_start, const double& 
     double temp_copy = temperature;
     double best {1000000};
     double cooling_rate {0.99};
-    double initial_temperature = temperature; // Store the initial temperature
 
     for(unsigned ii {0}; ii < iterations; ++ii) {
         temperature = temp_copy;
@@ -189,13 +188,12 @@ double simulated_annealing_adaptive(const double& interval_start, const double& 
         double best_value = calculate_function(
                 decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, best_binary_string));
 
-        int accepted_worse_solutions = 0; // Counter for accepted worse solutions
-        int total_worse_solutions = 0;    // Counter for total worse solutions
-        int max_inner_iterations = 10000; // Add a maximum number of inner iterations
+        int accepted_worse_solutions = 0;
+        int total_worse_solutions = 0;
+        int max_inner_iterations = 10000;
 
         while (temperature > 0.000001 && max_inner_iterations > 0) {
             bool no_solution{false};
-            unsigned iterator{0};
 
             while (!no_solution) {
                 std::string random_neighbour1 = generateNeighbor(best_binary_string, 1);
@@ -223,12 +221,11 @@ double simulated_annealing_adaptive(const double& interval_start, const double& 
                 max_inner_iterations--; // Decrease inner iteration counter
             }
 
-            // Adapt the cooling rate based on the acceptance rate
             double acceptance_rate = (double)accepted_worse_solutions / total_worse_solutions;
             if (acceptance_rate < 0.2) {
-                cooling_rate *= 0.9; // Reduce cooling rate
+                cooling_rate *= 0.9;
             } else if (acceptance_rate > 0.4) {
-                cooling_rate *= 1.1; // Increase cooling rate
+                cooling_rate *= 1.1;
             }
 
             temperature *= cooling_rate;
@@ -249,7 +246,7 @@ double simulated_annealing_with_decay(const double& interval_start, const double
     double cooling_rate {0.9955};
 
     for(unsigned ii {0}; ii < iterations; ++ii) {
-        double temperature = initial_temperature * exp(-0.01 * ii); // Exponential decay function
+        double temperature = initial_temperature * exp(-0.01 * ii);
 
         std::string best_binary_string = generate_binary_string(interval_start, interval_end, epsilon,
                                                                 number_of_dimensions);
@@ -260,7 +257,6 @@ double simulated_annealing_with_decay(const double& interval_start, const double
 
         while (temperature > 0.00001 && max_inner_iterations > 0) {
             bool no_solution{false};
-            unsigned iterator{0};
 
             while (!no_solution) {
                 unsigned index{0};
@@ -303,26 +299,24 @@ double simulated_annealing_with_linear_decay(const double& interval_start, const
                                              double (*calculate_function)(const std::vector<double>& vec)) {
 
     double best {1000000};
-    double cooling_rate {0.9955};
-    double temperature = initial_temperature;
+    double cooling_rate {0.999}; //9975 is best
+    //double temperature = initial_temperature;
 
     for(unsigned ii {0}; ii < iterations; ++ii) {
-        // Linear decay function
-        temperature = initial_temperature - (ii * (initial_temperature / iterations));
-
+        //double temperature = initial_temperature;
+        double temperature = initial_temperature - (ii * (initial_temperature / iterations));
+        //double temperature = initial_temperature * exp(-0.01 * ii);
         std::string best_binary_string = generate_binary_string(interval_start, interval_end, epsilon,
                                                                 number_of_dimensions);
         double best_value = calculate_function(
                 decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, best_binary_string));
+        int max_inner_iterations {200000};
 
-        int max_inner_iterations = 10000;
-
-        while (temperature > 0.00001 && max_inner_iterations > 0) {
+        while (temperature > 0.000001 && max_inner_iterations > 0) {
 
             int no_solution{0};
-
-            while (no_solution < 4) {
-                std::string random_neighbour1 = generateNeighbor(best_binary_string, 2);
+            while (no_solution < 5) {
+                std::string random_neighbour1 = generateNeighbor(best_binary_string, 5);
 
                 //std::string random_neighbour1 = random_neighbour(interval_start, interval_end, epsilon, number_of_dimensions, best_binary_string);
                 double random_neighbour_value = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions,random_neighbour1));
@@ -333,21 +327,19 @@ double simulated_annealing_with_linear_decay(const double& interval_start, const
                 } else {
 
                     double delta = random_neighbour_value - best_value;
-                    //double acceptance_probability = exp(-delta / temperature);
-                    double acceptance_probability = 1 / std::pow(10, delta / temperature);
+                    double acceptance_probability = exp(-delta / temperature);
+                    //double acceptance_probability = 1 / std::pow(10, delta / temperature);
 
                     if (get_random_double(0, 1) < acceptance_probability) {
                         best_binary_string = random_neighbour1;
                         best_value = random_neighbour_value;
                     } else
-                        no_solution++;
+                        ++no_solution;
                 }
                 max_inner_iterations--;
             }
-
             temperature *= cooling_rate;
         }
-
         if (best_value < best)
             best = best_value;
     }
