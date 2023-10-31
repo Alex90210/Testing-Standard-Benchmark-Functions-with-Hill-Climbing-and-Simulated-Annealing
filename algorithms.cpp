@@ -1,8 +1,8 @@
 #include "algorithms.hpp"
 
 unsigned get_random_unsigned(unsigned min, unsigned max) {
-    std::random_device rd;
-    std::mt19937 eng(rd());
+    auto seed = std::chrono::high_resolution_clock::now().time_since_epoch().count();
+    std::mt19937 eng(seed);
 
     std::uniform_int_distribution<> distribution(min, max);
 
@@ -18,21 +18,16 @@ double get_random_double(double min, double max) {
     return distribution(eng);
 }
 
-std::string random_neighbour(const double& interval_start, const double& interval_end, double epsilon, const std::string& binary_string) {
+std::string random_neighbour(const double& interval_start, const double& interval_end, double epsilon, unsigned number_of_dimensions, std::string& binary_string) {
 
-    // at max only one bit should be flipped for every dimension, I don't know how to enforce the interval when flipping multiple bits
-    // what is writen above is not true, the decoding puts the value in the interval, but the solution implemented below might not be the worst idea
-    // I should experiment with multiple flipped bits for each dimension though
     std::string copy_string = binary_string;
     unsigned dim_len = D_binary_length(interval_start, interval_end, epsilon);
-    unsigned max_number_of_flipped_bits = ceil(std::log2(binary_string.length()));
-    unsigned random_max = get_random_unsigned(1, max_number_of_flipped_bits);
 
-    unsigned dimensional_counter {0};
-    for (size_t i {0}; i < random_max; ++i) {
-        unsigned random_index = get_random_unsigned(dimensional_counter, binary_string.length());
-        copy_string[random_index] = (copy_string[random_index] == '1') ? '0' : '1';
-        dimensional_counter += dim_len;
+    for (size_t i {0}; i < number_of_dimensions; ++i) {
+        for (size_t j {i * dim_len}; j < (i + 1) * dim_len; j++) {
+            unsigned index = get_random_unsigned(i * dim_len, (i + 1) * dim_len);
+            copy_string[index] = (copy_string[index] == '1') ? '0' : '1';
+        }
     }
 
     return copy_string;
@@ -131,8 +126,6 @@ std::string generateNeighbor(const std::string& currentSolution, int numBitsToFl
     return neighbor;
 }
 
-
-
 double simulated_annealing(const double& interval_start, const double& interval_end, double epsilon,
                            unsigned number_of_dimensions, unsigned iterations, double temperature,
                            double (*calculate_function)(const std::vector<double>& vec)) {
@@ -142,25 +135,16 @@ double simulated_annealing(const double& interval_start, const double& interval_
     double cooling_rate {0.99};
     for(unsigned ii {0}; ii < iterations; ++ii) {
         temperature = temp_copy;
-        std::string best_binary_string = generate_binary_string(interval_start, interval_end, epsilon,
-                                                                number_of_dimensions);
+        std::string best_binary_string = generate_binary_string(interval_start, interval_end, epsilon,number_of_dimensions);
         double best_value = calculate_function(
                 decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, best_binary_string));
 
-        while (temperature > 0.000001) {
+        while (temperature > 0.01) {
 
-            bool no_solution{false};
-            unsigned iterator{0};
-            while (!no_solution) {
+            unsigned bad_solution_counter {0};
+            while (bad_solution_counter < 10) {
 
-                std::string random_neighbour1 = generateNeighbor(best_binary_string, 1);
-                unsigned fate = get_random_unsigned(0, 1);
-                /*if (fate == 1)
-                    random_neighbour1 = random_neighbour(interval_start, interval_end, epsilon, best_binary_string);
-                else
-                    random_neighbour1 = first_improvement(interval_start, interval_end, epsilon, number_of_dimensions,
-                                                          best_binary_string, best_value, calculate_function);
-                ++iterator; // works better than nothing*/
+                std::string random_neighbour1 = random_neighbour(interval_start, interval_end, epsilon, number_of_dimensions, best_binary_string);
                 double random_neighbour_value = calculate_function(
                         decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions,
                                              random_neighbour1));
@@ -169,16 +153,16 @@ double simulated_annealing(const double& interval_start, const double& interval_
                     best_binary_string = random_neighbour1;
                     best_value = random_neighbour_value;
                 } else {
-
                     double delta = random_neighbour_value - best_value;
-                    /*double acceptance_probability = 1 / std::pow(10, delta / current_temperature);*/
-                    double acceptance_probability = exp(-delta / temperature);
+                    double acceptance_probability = 1 / std::pow(10, delta / temperature);
+                    /*double acceptance_probability = exp(-delta / temperature);*/
+
                     if (get_random_double(0, 1) < acceptance_probability) {
                         best_binary_string = random_neighbour1;
                         best_value = random_neighbour_value;
+                        ++bad_solution_counter;
                     } else
-                        no_solution = true;
-
+                        ++bad_solution_counter;
                 }
             }
             temperature *= cooling_rate;
@@ -262,7 +246,7 @@ double simulated_annealing_with_decay(const double& interval_start, const double
                                       double (*calculate_function)(const std::vector<double>& vec)) {
 
     double best {1000000};
-    double cooling_rate {0.99};
+    double cooling_rate {0.9955};
 
     for(unsigned ii {0}; ii < iterations; ++ii) {
         double temperature = initial_temperature * exp(-0.01 * ii); // Exponential decay function
@@ -272,15 +256,15 @@ double simulated_annealing_with_decay(const double& interval_start, const double
         double best_value = calculate_function(
                 decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, best_binary_string));
 
-        int max_inner_iterations = 50;
+        int max_inner_iterations = 10000;
 
-        while (temperature > 0.000001 && max_inner_iterations > 0) {
+        while (temperature > 0.00001 && max_inner_iterations > 0) {
             bool no_solution{false};
             unsigned iterator{0};
 
             while (!no_solution) {
                 unsigned index{0};
-                std::string random_neighbour1 = generateNeighbor(best_binary_string, 1);
+                std::string random_neighbour1 = generateNeighbor(best_binary_string, 2);
                 index++;
                 double random_neighbour_value = calculate_function(
                         decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions,
@@ -319,7 +303,7 @@ double simulated_annealing_with_linear_decay(const double& interval_start, const
                                              double (*calculate_function)(const std::vector<double>& vec)) {
 
     double best {1000000};
-    double cooling_rate {0.99};
+    double cooling_rate {0.9955};
     double temperature = initial_temperature;
 
     for(unsigned ii {0}; ii < iterations; ++ii) {
@@ -333,30 +317,31 @@ double simulated_annealing_with_linear_decay(const double& interval_start, const
 
         int max_inner_iterations = 10000;
 
-        while (temperature > 0.000001 && max_inner_iterations > 0) {
-            bool no_solution{false};
-            unsigned iterator{0};
+        while (temperature > 0.00001 && max_inner_iterations > 0) {
 
-            while (!no_solution) {
+            int no_solution{0};
+
+            while (no_solution < 4) {
                 std::string random_neighbour1 = generateNeighbor(best_binary_string, 2);
-                double random_neighbour_value = calculate_function(
-                        decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions,
-                                             random_neighbour1));
+
+                //std::string random_neighbour1 = random_neighbour(interval_start, interval_end, epsilon, number_of_dimensions, best_binary_string);
+                double random_neighbour_value = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions,random_neighbour1));
 
                 if (random_neighbour_value < best_value) {
                     best_binary_string = random_neighbour1;
                     best_value = random_neighbour_value;
                 } else {
+
                     double delta = random_neighbour_value - best_value;
-                    double acceptance_probability = exp(-delta / temperature);
+                    //double acceptance_probability = exp(-delta / temperature);
+                    double acceptance_probability = 1 / std::pow(10, delta / temperature);
 
                     if (get_random_double(0, 1) < acceptance_probability) {
                         best_binary_string = random_neighbour1;
                         best_value = random_neighbour_value;
                     } else
-                        no_solution = true;
+                        no_solution++;
                 }
-
                 max_inner_iterations--;
             }
 

@@ -7,7 +7,9 @@ std::string first_improvement(const double& interval_start, const double& interv
     double best_value {string_value};
     std::string copy_string = binary_string;
 
+
     for (unsigned i = get_random_unsigned(0, copy_string.length()); i < copy_string.length(); ++i) {
+
         copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
         double value = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, copy_string));
 
@@ -84,6 +86,7 @@ std::string worst_improvement(const double& interval_start, const double& interv
     for (const auto& pair : index_map) {
         if(pair.first < string_value) {
             copy_string = pair.second;
+            break;
         }
     }
 

@@ -1,34 +1,167 @@
 #include "algorithms.hpp"
 #include <chrono>
 #include <iomanip>
+#include <fstream>
 
 int main () {
 
-    std::string mode {"BI"};
+    std::string mode {"FI"};
     unsigned number_of_dimensions {30};
-    double epsilon {0.001};
-    unsigned iterations {100};
+    double epsilon {0.0001};
+    unsigned iterations {1000};
     double interval_start {-5.12};
     double interval_end {5.12};
 
     double temperature {100};
 
-    auto start = std::chrono::high_resolution_clock::now();
+    interval_start = -5.12;
+    interval_end = 5.12;
+
+    /*double s = simulated_annealing_with_linear_decay(interval_start, interval_end, epsilon, number_of_dimensions, iterations, temperature, rastrigins_function);
+    std::cout << "annealing rastrigin: " << s << std::endl;*/
+
+    double min_r = std::numeric_limits<double>::max();
+    double max_r = std::numeric_limits<double>::lowest();
+    double total_r = 0;
+    double min_time = std::numeric_limits<double>::max();
+    double max_time = std::numeric_limits<double>::lowest();
+    double total_time = 0;
+
+    for (int i = 0; i < 30; ++i) {
+        auto start = std::chrono::high_resolution_clock::now();
+
+        //double best_r = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, rastrigins_function);
+        double best_r = simulated_annealing_with_linear_decay(interval_start, interval_end, epsilon, number_of_dimensions, iterations, temperature, rastrigins_function);
+        total_r += best_r;
+        min_r = std::min(min_r, best_r);
+        max_r = std::max(max_r, best_r);
+
+        auto end = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> duration = end - start;
+        double exec_time = duration.count();
+        total_time += exec_time;
+        min_time = std::min(min_time, exec_time);
+        max_time = std::max(max_time, exec_time);
+
+        // Output to console
+        std::cout << std::fixed << std::setprecision(5) << "sim RASTRIGIN: " << best_r << std::endl;
+        std::cout << "Program executed in: " << exec_time << " seconds." << std::endl;
+
+        // Output to file
+
+    }
+
+    // Calculate averages
+    double avg_r = total_r / 30.0;
+    double avg_time = total_time / 30.0;
+
+    // Output averages to console
+    std::cout << "Average Value: " << avg_r << std::endl;
+    std::cout << "Min Value: " << min_r << std::endl;
+    std::cout << "Max Value: " << max_r << std::endl;
+    std::cout << "Average Time: " << avg_time << " seconds" << std::endl;
+    std::cout << "Min Time: " << min_time << " seconds" << std::endl;
+    std::cout << "Max Time: " << max_time << " seconds" << std::endl;
+
+    // Output averages to file
 
 
+    // SCHWEFELS
     interval_start = -500;
     interval_end = 500;
-    double sim = simulated_annealing_with_linear_decay(interval_start, interval_end, epsilon, number_of_dimensions, iterations, temperature, schwefels_function);
-    std::cout << "Simulated annealer: " << sim << std::endl;
-    double hill = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, schwefels_function);
-    std::cout << "Hill climber: " << hill << std::endl;
 
-    double random_point = rastrigins_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, generate_binary_string(interval_start, interval_end, epsilon, number_of_dimensions)));
-    std::cout << "random rastrigin value: " << random_point << std::endl;
 
-    auto end = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double> duration = end - start;
-    std::cout << "Program executed in: " << duration.count() << " seconds." << std::endl;
+
+    /*min_r = std::numeric_limits<double>::max();
+    max_r = std::numeric_limits<double>::lowest();
+    total_r = 0;
+    min_time = std::numeric_limits<double>::max();
+    max_time = std::numeric_limits<double>::lowest();
+    total_time = 0;
+
+    for (int i = 0; i < 30; ++i) {
+        auto start = std::chrono::high_resolution_clock::now();
+
+        double best_r = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, schwefels_function);
+        total_r += best_r;
+        min_r = std::min(min_r, best_r);
+        max_r = std::max(max_r, best_r);
+
+        auto end = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> duration = end - start;
+        double exec_time = duration.count();
+        total_time += exec_time;
+        min_time = std::min(min_time, exec_time);
+        max_time = std::max(max_time, exec_time);
+
+        // Output to console
+        std::cout << std::fixed << std::setprecision(5) << "schwefels: " << best_r << std::endl;
+        std::cout << "Program executed in: " << exec_time << " seconds." << std::endl;
+
+        // Output to file
+
+    }
+
+    // Calculate averages
+    avg_r = total_r / 30.0;
+    avg_time = total_time / 30.0;
+
+    // Output averages to console
+    std::cout << "Average Value: " << avg_r << std::endl;
+    std::cout << "Min Value: " << min_r << std::endl;
+    std::cout << "Max Value: " << max_r << std::endl;
+    std::cout << "Average Time: " << avg_time << " seconds" << std::endl;
+    std::cout << "Min Time: " << min_time << " seconds" << std::endl;
+    std::cout << "Max Time: " << max_time << " seconds" << std::endl;
+
+
+
+    // Michalewicz
+    interval_start = 0;
+    interval_end = M_PI;
+
+
+
+    min_r = std::numeric_limits<double>::max();
+    max_r = std::numeric_limits<double>::lowest();
+    total_r = 0;
+    min_time = std::numeric_limits<double>::max();
+    max_time = std::numeric_limits<double>::lowest();
+    total_time = 0;
+
+    for (int i = 0; i < 30; ++i) {
+        auto start = std::chrono::high_resolution_clock::now();
+
+        double best_r = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, michalewiczs_function);
+        total_r += best_r;
+        min_r = std::min(min_r, best_r);
+        max_r = std::max(max_r, best_r);
+
+        auto end = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> duration = end - start;
+        double exec_time = duration.count();
+        total_time += exec_time;
+        min_time = std::min(min_time, exec_time);
+        max_time = std::max(max_time, exec_time);
+
+        // Output to console
+        std::cout << std::fixed << std::setprecision(5) << "Michalewicz: " << best_r << std::endl;
+        std::cout << "Program executed in: " << exec_time << " seconds." << std::endl;
+
+
+    }
+
+    // Calculate averages
+    avg_r = total_r / 30.0;
+    avg_time = total_time / 30.0;
+
+    // Output averages to console
+    std::cout << "Average Value: " << avg_r << std::endl;
+    std::cout << "Min Value: " << min_r << std::endl;
+    std::cout << "Max Value: " << max_r << std::endl;
+    std::cout << "Average Time: " << avg_time << " seconds" << std::endl;
+    std::cout << "Min Time: " << min_time << " seconds" << std::endl;
+    std::cout << "Max Time: " << max_time << " seconds" << std::endl;*/
 
     return 0;
 }
