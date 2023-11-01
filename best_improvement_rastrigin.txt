@@ -1,4 +1,0 @@
-
-SELECT 
-FROM studenti s1
-JOIN studenti s2

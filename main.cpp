@@ -8,17 +8,11 @@ int main () {
     std::string mode {"WI"};
     unsigned number_of_dimensions {30};
     double epsilon {0.0001};
-    unsigned iterations {100};
+    unsigned iterations {1};
     double interval_start {-5.12};
     double interval_end {5.12};
 
     double temperature {100};
-
-    interval_start = -5.12;
-    interval_end = 5.12;
-
-    /*double s = simulated_annealing_with_linear_decay(interval_start, interval_end, epsilon, number_of_dimensions, iterations, temperature, rastrigins_function);
-    std::cout << "annealing rastrigin: " << s << std::endl;*/
 
     double min_r = std::numeric_limits<double>::max();
     double max_r = std::numeric_limits<double>::lowest();
@@ -30,8 +24,8 @@ int main () {
     for (int i = 0; i < 30; ++i) {
         auto start = std::chrono::high_resolution_clock::now();
 
-        double best_r = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, rastrigins_function);
-        //double best_r = simulated_annealing_with_linear_decay(interval_start, interval_end, epsilon, number_of_dimensions, iterations, temperature, rastrigins_function);
+        //double best_r = hill_climbing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, mode, rastrigins_function);
+        double best_r = simulated_annealing(interval_start, interval_end, epsilon, number_of_dimensions, iterations, temperature, rastrigins_function);
         total_r += best_r;
         min_r = std::min(min_r, best_r);
         max_r = std::max(max_r, best_r);
@@ -44,7 +38,7 @@ int main () {
         max_time = std::max(max_time, exec_time);
 
         // Output to console
-        std::cout << std::fixed << std::setprecision(5) << "WORST IMPROVEMENT RASTRIGIN: " << best_r << std::endl;
+        std::cout << std::fixed << std::setprecision(5) << "sim ann ras: " << best_r << std::endl;
         std::cout << "Program executed in: " << exec_time << " seconds." << std::endl;
 
         // Output to file
