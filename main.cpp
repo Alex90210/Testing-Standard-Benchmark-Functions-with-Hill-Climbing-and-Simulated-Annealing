@@ -5,7 +5,7 @@
 
 int main () {
 
-    std::string mode {"WI"};
+    std::string mode {"BI"};
     unsigned number_of_dimensions {30};
     double epsilon {0.0001};
     unsigned iterations {1};

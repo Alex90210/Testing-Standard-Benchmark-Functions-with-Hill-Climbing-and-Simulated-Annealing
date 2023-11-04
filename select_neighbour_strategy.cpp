@@ -50,6 +50,32 @@ std::string best_improvement(const double& interval_start, const double& interva
     return copy_string;
 }
 
+std::string best_improvement_up(const double& interval_start, const double& interval_end, double epsilon, unsigned number_of_dimensions,
+                             const std::string& binary_string, double string_value, double (*calculate_function)(const std::vector<double>& vec)) {
+
+    int index {-1};
+    double best_value {string_value};
+    std::string copy_string = binary_string;
+
+    for (int i {0}; i < copy_string.length(); ++i) {
+
+        copy_string[i] = (copy_string[i] == '1') ? '0' : '1'; // this could slow the process a lot, maybe a vector of bool values was a better idea
+        double value = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, copy_string));
+
+        if (value > best_value) {
+            best_value = value;
+            index = i;
+        }
+
+        copy_string[i] = (copy_string[i] == '1') ? '0' : '1';
+    }
+
+    if (best_value > calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, copy_string)))
+        copy_string[index] = (copy_string[index] == '1') ? '0' : '1';
+
+    return copy_string;
+}
+
 bool descending_sort(double a, double b) {
     return a > b;
 }

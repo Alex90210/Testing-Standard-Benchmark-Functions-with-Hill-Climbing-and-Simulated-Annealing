@@ -30,3 +30,8 @@ double michalewiczs_function(const std::vector<double>& vec) {
     }
     return -sum;
 }
+
+double h2p_function(const std::vector<double>& vec) {
+    double x = vec[0];
+    return pow(x, 3) - 60 * pow(x, 2) + 900 * x + 100;
+}

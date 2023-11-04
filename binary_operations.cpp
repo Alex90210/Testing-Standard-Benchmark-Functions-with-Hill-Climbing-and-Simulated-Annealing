@@ -24,6 +24,20 @@ std::string generate_binary_string(const double& interval_start, const double& i
     return generated_string;
 }
 
+std::string generate_binary_string_h1p(const double& interval_start, const double& interval_end, double epsilon, unsigned number_of_dimensions) {
+
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(0, 1);
+
+    std::string generated_string;
+    for (size_t i = 0; i < 5; ++i) {
+        generated_string += (dis(gen) == 0) ? '1' : '0';
+    }
+
+    return generated_string;
+}
+
 unsigned binary_to_decimal(const std::string& binary_string, const size_t& string_start, const size_t& string_end) {
 
     unsigned decimal_value {0};
