@@ -1,0 +1,72 @@
+Rastrigin: 28.95898
+Program executed in: 327.26247 seconds.
+Rastrigin: 25.37187
+Program executed in: 321.42853 seconds.
+Rastrigin: 28.28109
+Program executed in: 325.65418 seconds.
+Rastrigin: 30.07544
+Program executed in: 345.47525 seconds.
+Rastrigin: 31.33716
+Program executed in: 572.89533 seconds.
+Rastrigin: 30.24571
+Program executed in: 560.79383 seconds.
+Rastrigin: 29.81961
+Program executed in: 371.54235 seconds.
+Rastrigin: 27.79912
+Program executed in: 536.82379 seconds.
+Rastrigin: 26.29117
+Program executed in: 482.24520 seconds.
+Rastrigin: 28.33688
+Program executed in: 337.74037 seconds.
+Rastrigin: 30.68450
+Program executed in: 352.36928 seconds.
+Rastrigin: 29.57777
+Program executed in: 336.11311 seconds.
+Rastrigin: 31.62629
+Program executed in: 335.30670 seconds.
+Rastrigin: 25.05497
+Program executed in: 332.99903 seconds.
+Rastrigin: 32.23608
+Program executed in: 334.54879 seconds.
+Rastrigin: 26.31649
+Program executed in: 348.08130 seconds.
+Rastrigin: 28.53758
+Program executed in: 411.56742 seconds.
+Rastrigin: 27.52738
+Program executed in: 560.03341 seconds.
+Rastrigin: 22.85476
+Program executed in: 359.85401 seconds.
+Rastrigin: 31.74845
+Program executed in: 333.71528 seconds.
+Rastrigin: 20.33712
+Program executed in: 351.39510 seconds.
+Rastrigin: 23.82933
+Program executed in: 334.79892 seconds.
+Rastrigin: 30.68708
+Program executed in: 377.75915 seconds.
+Rastrigin: 21.59274
+Program executed in: 316.20494 seconds.
+Rastrigin: 31.56746
+Program executed in: 317.45281 seconds.
+Rastrigin: 29.07552
+Program executed in: 316.25589 seconds.
+Rastrigin: 31.45624
+Program executed in: 317.51343 seconds.
+Rastrigin: 23.11073
+Program executed in: 353.92242 seconds.
+Rastrigin: 27.99960
+Program executed in: 505.94095 seconds.
+Rastrigin: 28.63378
+Program executed in: 620.44842 seconds.
+
+Average Value: 28.03236
+Min Value: 20.33712
+Max Value: 32.23608
+
+Average Time: 389.93805 seconds
+Min Time: 316.20494 seconds
+Max Time: 620.44842 seconds
+
+Process finished with exit code 0
+
+1000 iterations, 0.0001 epsilon

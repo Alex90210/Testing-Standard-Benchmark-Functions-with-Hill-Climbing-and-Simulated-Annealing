@@ -1,0 +1,66 @@
+sim RASTRIGIN: 24.35128
+Program executed in: 83.45131 seconds.
+sim RASTRIGIN: 25.26802
+Program executed in: 76.66811 seconds.
+sim RASTRIGIN: 32.11264
+Program executed in: 76.80715 seconds.
+sim RASTRIGIN: 29.22851
+Program executed in: 76.65078 seconds.
+sim RASTRIGIN: 28.95037
+Program executed in: 75.26028 seconds.
+sim RASTRIGIN: 30.33620
+Program executed in: 75.85964 seconds.
+sim RASTRIGIN: 26.36729
+Program executed in: 75.47484 seconds.
+sim RASTRIGIN: 26.56104
+Program executed in: 75.24997 seconds.
+sim RASTRIGIN: 26.45070
+Program executed in: 113.83125 seconds.
+sim RASTRIGIN: 29.34675
+Program executed in: 87.24954 seconds.
+sim RASTRIGIN: 30.03176
+Program executed in: 117.52030 seconds.
+sim RASTRIGIN: 24.19670
+Program executed in: 122.52332 seconds.
+sim RASTRIGIN: 27.17314
+Program executed in: 100.69217 seconds.
+sim RASTRIGIN: 29.21702
+Program executed in: 95.09217 seconds.
+sim RASTRIGIN: 26.84877
+Program executed in: 81.90141 seconds.
+sim RASTRIGIN: 29.69047
+Program executed in: 77.53373 seconds.
+sim RASTRIGIN: 32.28662
+Program executed in: 77.18349 seconds.
+sim RASTRIGIN: 25.76067
+Program executed in: 77.93514 seconds.
+sim RASTRIGIN: 25.84502
+Program executed in: 78.01062 seconds.
+sim RASTRIGIN: 28.17202
+Program executed in: 77.83339 seconds.
+sim RASTRIGIN: 22.82277
+Program executed in: 87.27518 seconds.
+sim RASTRIGIN: 29.93767
+Program executed in: 82.53269 seconds.
+sim RASTRIGIN: 27.11285
+Program executed in: 76.93551 seconds.
+sim RASTRIGIN: 28.64303
+Program executed in: 76.91111 seconds.
+sim RASTRIGIN: 25.43023
+Program executed in: 116.96673 seconds.
+sim RASTRIGIN: 28.69512
+Program executed in: 115.68824 seconds.
+sim RASTRIGIN: 30.59598
+Program executed in: 105.52809 seconds.
+sim RASTRIGIN: 27.56773
+Program executed in: 96.45761 seconds.
+sim RASTRIGIN: 26.84560
+Program executed in: 108.94850 seconds.
+sim RASTRIGIN: 28.14112
+Program executed in: 86.40485 seconds.
+Average Value: 27.79957
+Min Value: 22.82277
+Max Value: 32.28662
+Average Time: 89.21257 seconds
+Min Time: 75.24997 seconds
+Max Time: 122.52332 seconds

@@ -1,0 +1,66 @@
+BEST IMPROVEMENT M: -25.41806
+Program executed in: 3.23336 seconds.
+BEST IMPROVEMENT M: -25.46124
+Program executed in: 3.38778 seconds.
+BEST IMPROVEMENT M: -25.76990
+Program executed in: 3.35418 seconds.
+BEST IMPROVEMENT M: -24.91333
+Program executed in: 3.27795 seconds.
+BEST IMPROVEMENT M: -26.22963
+Program executed in: 3.27322 seconds.
+BEST IMPROVEMENT M: -25.08213
+Program executed in: 3.23973 seconds.
+BEST IMPROVEMENT M: -25.54640
+Program executed in: 3.27640 seconds.
+BEST IMPROVEMENT M: -25.52397
+Program executed in: 3.40947 seconds.
+BEST IMPROVEMENT M: -26.03640
+Program executed in: 3.35784 seconds.
+BEST IMPROVEMENT M: -25.46490
+Program executed in: 3.20402 seconds.
+BEST IMPROVEMENT M: -25.28467
+Program executed in: 3.32800 seconds.
+BEST IMPROVEMENT M: -25.70135
+Program executed in: 3.21204 seconds.
+BEST IMPROVEMENT M: -25.75260
+Program executed in: 3.34696 seconds.
+BEST IMPROVEMENT M: -25.45640
+Program executed in: 3.39032 seconds.
+BEST IMPROVEMENT M: -25.00162
+Program executed in: 3.24866 seconds.
+BEST IMPROVEMENT M: -25.73266
+Program executed in: 3.34949 seconds.
+BEST IMPROVEMENT M: -25.46637
+Program executed in: 3.29712 seconds.
+BEST IMPROVEMENT M: -24.98896
+Program executed in: 3.17412 seconds.
+BEST IMPROVEMENT M: -25.77457
+Program executed in: 3.28669 seconds.
+BEST IMPROVEMENT M: -25.32638
+Program executed in: 3.31729 seconds.
+BEST IMPROVEMENT M: -25.07357
+Program executed in: 3.23199 seconds.
+BEST IMPROVEMENT M: -24.85951
+Program executed in: 3.23048 seconds.
+BEST IMPROVEMENT M: -24.96315
+Program executed in: 3.33156 seconds.
+BEST IMPROVEMENT M: -25.43606
+Program executed in: 3.23527 seconds.
+BEST IMPROVEMENT M: -26.13954
+Program executed in: 3.24926 seconds.
+BEST IMPROVEMENT M: -26.04856
+Program executed in: 3.37510 seconds.
+BEST IMPROVEMENT M: -24.79306
+Program executed in: 3.40274 seconds.
+BEST IMPROVEMENT M: -25.06571
+Program executed in: 3.32822 seconds.
+BEST IMPROVEMENT M: -25.19032
+Program executed in: 3.22336 seconds.
+BEST IMPROVEMENT M: -25.74724
+Program executed in: 3.28247 seconds.
+Average Value: -25.44161
+Min Value: -26.22963
+Max Value: -24.79306
+Average Time: 3.29517 seconds
+Min Time: 3.17412 seconds
+Max Time: 3.40947 seconds

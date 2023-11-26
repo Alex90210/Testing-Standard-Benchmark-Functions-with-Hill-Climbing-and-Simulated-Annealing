@@ -1,0 +1,206 @@
+5 dimensions:
+
+annealer DE JONG: 0.00008
+Program executed in: 2.48324 seconds.
+annealer DE JONG: 0.00049
+Program executed in: 2.46180 seconds.
+annealer DE JONG: 0.00006
+Program executed in: 2.47753 seconds.
+annealer DE JONG: 0.00011
+Program executed in: 2.51717 seconds.
+annealer DE JONG: 0.00007
+Program executed in: 2.50147 seconds.
+annealer DE JONG: 0.00011
+Program executed in: 2.51602 seconds.
+annealer DE JONG: 0.00003
+Program executed in: 2.53177 seconds.
+annealer DE JONG: 0.00019
+Program executed in: 2.50326 seconds.
+annealer DE JONG: 0.00004
+Program executed in: 2.49416 seconds.
+annealer DE JONG: 0.00001
+Program executed in: 2.49619 seconds.
+annealer DE JONG: 0.00019
+Program executed in: 2.66057 seconds.
+annealer DE JONG: 0.00001
+Program executed in: 2.51966 seconds.
+annealer DE JONG: 0.00008
+Program executed in: 2.46993 seconds.
+annealer DE JONG: 0.00020
+Program executed in: 2.50930 seconds.
+annealer DE JONG: 0.00012
+Program executed in: 2.46993 seconds.
+annealer DE JONG: 0.00009
+Program executed in: 2.46881 seconds.
+annealer DE JONG: 0.00005
+Program executed in: 2.46152 seconds.
+annealer DE JONG: 0.00008
+Program executed in: 2.47182 seconds.
+annealer DE JONG: 0.00006
+Program executed in: 2.46109 seconds.
+annealer DE JONG: 0.00008
+Program executed in: 2.46647 seconds.
+annealer DE JONG: 0.00012
+Program executed in: 2.45859 seconds.
+annealer DE JONG: 0.00003
+Program executed in: 2.47268 seconds.
+annealer DE JONG: 0.00009
+Program executed in: 2.47351 seconds.
+annealer DE JONG: 0.00023
+Program executed in: 2.44728 seconds.
+annealer DE JONG: 0.00002
+Program executed in: 2.46874 seconds.
+annealer DE JONG: 0.00001
+Program executed in: 2.46953 seconds.
+annealer DE JONG: 0.00006
+Program executed in: 2.47457 seconds.
+annealer DE JONG: 0.00004
+Program executed in: 2.46731 seconds.
+annealer DE JONG: 0.00013
+Program executed in: 2.49680 seconds.
+annealer DE JONG: 0.00009
+Program executed in: 2.47199 seconds.
+Average Value: 0.00010
+Min Value: 0.00001
+Max Value: 0.00049
+Average Time: 2.48809 seconds
+Min Time: 2.44728 seconds
+Max Time: 2.66057 seconds
+
+10 dimensions:
+
+annealer DE JONG: 0.00023
+Program executed in: 2.71898 seconds.
+annealer DE JONG: 0.00009
+Program executed in: 2.59052 seconds.
+annealer DE JONG: 0.00011
+Program executed in: 2.75840 seconds.
+annealer DE JONG: 0.00016
+Program executed in: 2.58071 seconds.
+annealer DE JONG: 0.00019
+Program executed in: 2.59596 seconds.
+annealer DE JONG: 0.00009
+Program executed in: 2.60566 seconds.
+annealer DE JONG: 0.00019
+Program executed in: 2.57794 seconds.
+annealer DE JONG: 0.00010
+Program executed in: 2.57724 seconds.
+annealer DE JONG: 0.00016
+Program executed in: 2.59579 seconds.
+annealer DE JONG: 0.00010
+Program executed in: 2.58769 seconds.
+annealer DE JONG: 0.00011
+Program executed in: 2.57215 seconds.
+annealer DE JONG: 0.00019
+Program executed in: 2.59625 seconds.
+annealer DE JONG: 0.00004
+Program executed in: 2.59947 seconds.
+annealer DE JONG: 0.00020
+Program executed in: 2.63648 seconds.
+annealer DE JONG: 0.00012
+Program executed in: 2.61056 seconds.
+annealer DE JONG: 0.00023
+Program executed in: 2.69262 seconds.
+annealer DE JONG: 0.00027
+Program executed in: 2.53848 seconds.
+annealer DE JONG: 0.00004
+Program executed in: 2.59778 seconds.
+annealer DE JONG: 0.00008
+Program executed in: 2.59260 seconds.
+annealer DE JONG: 0.00010
+Program executed in: 2.59161 seconds.
+annealer DE JONG: 0.00018
+Program executed in: 2.65846 seconds.
+annealer DE JONG: 0.00020
+Program executed in: 2.59345 seconds.
+annealer DE JONG: 0.00008
+Program executed in: 2.59590 seconds.
+annealer DE JONG: 0.00010
+Program executed in: 2.58940 seconds.
+annealer DE JONG: 0.00003
+Program executed in: 2.59779 seconds.
+annealer DE JONG: 0.00006
+Program executed in: 2.57268 seconds.
+annealer DE JONG: 0.00007
+Program executed in: 2.56892 seconds.
+annealer DE JONG: 0.00015
+Program executed in: 2.58125 seconds.
+annealer DE JONG: 0.00013
+Program executed in: 2.53829 seconds.
+annealer DE JONG: 0.00011
+Program executed in: 2.54832 seconds.
+Average Value: 0.00013
+Min Value: 0.00003
+Max Value: 0.00027
+Average Time: 2.60205 seconds
+Min Time: 2.53829 seconds
+Max Time: 2.75840 seconds
+
+30 dimensions:
+
+annealer DE JONG: 0.00067
+Program executed in: 2.87510 seconds.
+annealer DE JONG: 0.00027
+Program executed in: 2.85368 seconds.
+annealer DE JONG: 0.00076
+Program executed in: 2.89091 seconds.
+annealer DE JONG: 0.00050
+Program executed in: 2.88289 seconds.
+annealer DE JONG: 0.00040
+Program executed in: 2.89303 seconds.
+annealer DE JONG: 0.00037
+Program executed in: 2.94645 seconds.
+annealer DE JONG: 0.00029
+Program executed in: 2.95606 seconds.
+annealer DE JONG: 0.00049
+Program executed in: 3.01144 seconds.
+annealer DE JONG: 0.00040
+Program executed in: 3.08496 seconds.
+annealer DE JONG: 0.00029
+Program executed in: 2.89781 seconds.
+annealer DE JONG: 0.00024
+Program executed in: 2.91103 seconds.
+annealer DE JONG: 0.00037
+Program executed in: 2.92254 seconds.
+annealer DE JONG: 0.00031
+Program executed in: 2.99099 seconds.
+annealer DE JONG: 0.00048
+Program executed in: 3.19556 seconds.
+annealer DE JONG: 0.00047
+Program executed in: 2.92416 seconds.
+annealer DE JONG: 0.00060
+Program executed in: 2.89249 seconds.
+annealer DE JONG: 0.00035
+Program executed in: 2.90525 seconds.
+annealer DE JONG: 0.00046
+Program executed in: 2.88764 seconds.
+annealer DE JONG: 0.00042
+Program executed in: 2.88327 seconds.
+annealer DE JONG: 0.00023
+Program executed in: 2.88410 seconds.
+annealer DE JONG: 0.00080
+Program executed in: 2.90793 seconds.
+annealer DE JONG: 0.00026
+Program executed in: 2.90097 seconds.
+annealer DE JONG: 0.00049
+Program executed in: 2.88936 seconds.
+annealer DE JONG: 0.00028
+Program executed in: 2.89800 seconds.
+annealer DE JONG: 0.00050
+Program executed in: 2.91287 seconds.
+annealer DE JONG: 0.00029
+Program executed in: 2.90172 seconds.
+annealer DE JONG: 0.00042
+Program executed in: 2.92747 seconds.
+annealer DE JONG: 0.00044
+Program executed in: 3.19968 seconds.
+annealer DE JONG: 0.00025
+Program executed in: 3.04668 seconds.
+annealer DE JONG: 0.00060
+Program executed in: 3.10185 seconds.
+Average Value: 0.00042
+Min Value: 0.00023
+Max Value: 0.00080
+Average Time: 2.94586 seconds
+Min Time: 2.85368 seconds
+Max Time: 3.19968 seconds

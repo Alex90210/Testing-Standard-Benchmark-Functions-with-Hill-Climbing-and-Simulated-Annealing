@@ -1,0 +1,68 @@
+sim RASTRIGIN: 8.65809
+Program executed in: 20.41761 seconds.
+sim RASTRIGIN: 6.73002
+Program executed in: 20.50587 seconds.
+sim RASTRIGIN: 9.95074
+Program executed in: 20.51989 seconds.
+sim RASTRIGIN: 6.82420
+Program executed in: 20.52509 seconds.
+sim RASTRIGIN: 7.69468
+Program executed in: 20.46479 seconds.
+sim RASTRIGIN: 10.43707
+Program executed in: 20.47266 seconds.
+sim RASTRIGIN: 8.69130
+Program executed in: 20.32526 seconds.
+sim RASTRIGIN: 10.41306
+Program executed in: 20.40328 seconds.
+sim RASTRIGIN: 6.47439
+Program executed in: 20.50321 seconds.
+sim RASTRIGIN: 10.32249
+Program executed in: 20.47740 seconds.
+sim RASTRIGIN: 8.46865
+Program executed in: 20.49276 seconds.
+sim RASTRIGIN: 12.67575
+Program executed in: 20.48020 seconds.
+sim RASTRIGIN: 16.05768
+Program executed in: 20.51833 seconds.
+sim RASTRIGIN: 14.87439
+Program executed in: 20.45649 seconds.
+sim RASTRIGIN: 9.22777
+Program executed in: 20.45836 seconds.
+sim RASTRIGIN: 11.63059
+Program executed in: 20.44321 seconds.
+sim RASTRIGIN: 4.26650
+Program executed in: 20.43679 seconds.
+sim RASTRIGIN: 4.46316
+Program executed in: 20.51300 seconds.
+sim RASTRIGIN: 9.41777
+Program executed in: 20.40605 seconds.
+sim RASTRIGIN: 10.74449
+Program executed in: 20.42111 seconds.
+sim RASTRIGIN: 9.20698
+Program executed in: 20.58426 seconds.
+sim RASTRIGIN: 7.69481
+Program executed in: 20.43087 seconds.
+sim RASTRIGIN: 12.15694
+Program executed in: 20.48988 seconds.
+sim RASTRIGIN: 8.76066
+Program executed in: 20.45166 seconds.
+sim RASTRIGIN: 13.09588
+Program executed in: 20.39869 seconds.
+sim RASTRIGIN: 15.62120
+Program executed in: 20.65615 seconds.
+sim RASTRIGIN: 10.40534
+Program executed in: 20.50973 seconds.
+sim RASTRIGIN: 12.67944
+Program executed in: 20.42018 seconds.
+sim RASTRIGIN: 9.93285
+Program executed in: 20.51086 seconds.
+sim RASTRIGIN: 10.40710
+Program executed in: 20.41144 seconds.
+
+Average Value: 9.93280
+Min Value: 4.26650
+Max Value: 16.05768
+
+Average Time: 20.47017 seconds
+Min Time: 20.32526 seconds
+Max Time: 20.65615 seconds

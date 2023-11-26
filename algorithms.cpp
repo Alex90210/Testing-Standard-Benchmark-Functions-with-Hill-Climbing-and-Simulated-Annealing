@@ -1,19 +1,19 @@
 #include "algorithms.hpp"
 
 unsigned get_random_unsigned(unsigned min, unsigned max) {
-    auto seed = std::chrono::high_resolution_clock::now().time_since_epoch().count();
-    std::mt19937 eng(seed);
+    static std::random_device rd;
+    static std::mt19937_64 eng(rd());
 
-    std::uniform_int_distribution<> distribution(min, max);
+    std::uniform_int_distribution<unsigned> distribution(min, max);
 
     return distribution(eng);
 }
 
 double get_random_double(double min, double max) {
-    std::random_device rd;
-    std::mt19937 eng(rd());
+    static std::random_device rd;
+    static std::mt19937_64 eng(rd());
 
-    std::uniform_real_distribution<> distribution(min, max);
+    std::uniform_real_distribution<double> distribution(min, max);
 
     return distribution(eng);
 }
@@ -158,12 +158,12 @@ double simulated_annealing(const double& interval_start, const double& interval_
         double best_value = calculate_function(
                 decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions, best_binary_string));
 
-        int max_inner_iterations {400000};
-        while (c_temperature >= 0.00000000001 && max_inner_iterations > 0) {
+        int max_inner_iterations {200000};
+        while (c_temperature >= 0.000000001 && max_inner_iterations > 0) {
 
             int no_solution{0};
             while (no_solution < 5) {
-                std::string random_neighbour1 = generate_neighbor_n_flipped_bits(best_binary_string, 6);
+                std::string random_neighbour1 = generate_neighbor_n_flipped_bits(best_binary_string, 5);
 
                 //std::string random_neighbour1 = random_neighbour(interval_start, interval_end, epsilon, number_of_dimensions, best_binary_string);
                 double random_neighbour_value = calculate_function(decode_binary_string(interval_start, interval_end, epsilon, number_of_dimensions,random_neighbour1));

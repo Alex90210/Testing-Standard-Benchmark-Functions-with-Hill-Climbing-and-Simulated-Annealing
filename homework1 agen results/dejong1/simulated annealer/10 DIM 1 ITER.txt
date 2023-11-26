@@ -1,0 +1,66 @@
+annealer DE JONG: 0.00023
+Program executed in: 2.71898 seconds.
+annealer DE JONG: 0.00009
+Program executed in: 2.59052 seconds.
+annealer DE JONG: 0.00011
+Program executed in: 2.75840 seconds.
+annealer DE JONG: 0.00016
+Program executed in: 2.58071 seconds.
+annealer DE JONG: 0.00019
+Program executed in: 2.59596 seconds.
+annealer DE JONG: 0.00009
+Program executed in: 2.60566 seconds.
+annealer DE JONG: 0.00019
+Program executed in: 2.57794 seconds.
+annealer DE JONG: 0.00010
+Program executed in: 2.57724 seconds.
+annealer DE JONG: 0.00016
+Program executed in: 2.59579 seconds.
+annealer DE JONG: 0.00010
+Program executed in: 2.58769 seconds.
+annealer DE JONG: 0.00011
+Program executed in: 2.57215 seconds.
+annealer DE JONG: 0.00019
+Program executed in: 2.59625 seconds.
+annealer DE JONG: 0.00004
+Program executed in: 2.59947 seconds.
+annealer DE JONG: 0.00020
+Program executed in: 2.63648 seconds.
+annealer DE JONG: 0.00012
+Program executed in: 2.61056 seconds.
+annealer DE JONG: 0.00023
+Program executed in: 2.69262 seconds.
+annealer DE JONG: 0.00027
+Program executed in: 2.53848 seconds.
+annealer DE JONG: 0.00004
+Program executed in: 2.59778 seconds.
+annealer DE JONG: 0.00008
+Program executed in: 2.59260 seconds.
+annealer DE JONG: 0.00010
+Program executed in: 2.59161 seconds.
+annealer DE JONG: 0.00018
+Program executed in: 2.65846 seconds.
+annealer DE JONG: 0.00020
+Program executed in: 2.59345 seconds.
+annealer DE JONG: 0.00008
+Program executed in: 2.59590 seconds.
+annealer DE JONG: 0.00010
+Program executed in: 2.58940 seconds.
+annealer DE JONG: 0.00003
+Program executed in: 2.59779 seconds.
+annealer DE JONG: 0.00006
+Program executed in: 2.57268 seconds.
+annealer DE JONG: 0.00007
+Program executed in: 2.56892 seconds.
+annealer DE JONG: 0.00015
+Program executed in: 2.58125 seconds.
+annealer DE JONG: 0.00013
+Program executed in: 2.53829 seconds.
+annealer DE JONG: 0.00011
+Program executed in: 2.54832 seconds.
+Average Value: 0.00013
+Min Value: 0.00003
+Max Value: 0.00027
+Average Time: 2.60205 seconds
+Min Time: 2.53829 seconds
+Max Time: 2.75840 seconds

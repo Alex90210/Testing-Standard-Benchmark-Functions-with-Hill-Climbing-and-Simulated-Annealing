@@ -1,0 +1,8 @@
+EPSILON = 0.00001
+ITERATIONS = 1
+TEMPERATURE = 25
+COOLING RATE = 0.9955
+max_inner_iterations {200000};
+while (temperature > 0.00000001 && max_inner_iterations > 0)
+no_solution < 2
+4 FLIPPED BITS

@@ -1,0 +1,66 @@
+sim ann ras: 14.11970
+Program executed in: 2.75926 seconds.
+sim ann ras: 21.03767
+Program executed in: 2.74127 seconds.
+sim ann ras: 14.94955
+Program executed in: 2.72744 seconds.
+sim ann ras: 12.88505
+Program executed in: 2.73541 seconds.
+sim ann ras: 15.88364
+Program executed in: 2.75657 seconds.
+sim ann ras: 18.30573
+Program executed in: 2.80359 seconds.
+sim ann ras: 9.20398
+Program executed in: 2.92706 seconds.
+sim ann ras: 8.71330
+Program executed in: 2.79338 seconds.
+sim ann ras: 26.49976
+Program executed in: 2.78488 seconds.
+sim ann ras: 13.41973
+Program executed in: 2.73325 seconds.
+sim ann ras: 9.90857
+Program executed in: 2.75413 seconds.
+sim ann ras: 16.68965
+Program executed in: 2.73029 seconds.
+sim ann ras: 9.19688
+Program executed in: 2.72395 seconds.
+sim ann ras: 12.11483
+Program executed in: 2.73718 seconds.
+sim ann ras: 9.98152
+Program executed in: 2.72400 seconds.
+sim ann ras: 16.33484
+Program executed in: 2.74296 seconds.
+sim ann ras: 23.72268
+Program executed in: 2.72742 seconds.
+sim ann ras: 16.61901
+Program executed in: 2.73895 seconds.
+sim ann ras: 19.07652
+Program executed in: 2.76891 seconds.
+sim ann ras: 18.56666
+Program executed in: 2.74385 seconds.
+sim ann ras: 15.50252
+Program executed in: 2.71866 seconds.
+sim ann ras: 15.10043
+Program executed in: 2.73932 seconds.
+sim ann ras: 13.69408
+Program executed in: 2.73732 seconds.
+sim ann ras: 13.87076
+Program executed in: 2.74422 seconds.
+sim ann ras: 17.30479
+Program executed in: 2.74999 seconds.
+sim ann ras: 18.27734
+Program executed in: 2.73276 seconds.
+sim ann ras: 6.28744
+Program executed in: 2.75100 seconds.
+sim ann ras: 22.84825
+Program executed in: 2.73959 seconds.
+sim ann ras: 19.77331
+Program executed in: 2.73375 seconds.
+sim ann ras: 16.36756
+Program executed in: 2.74318 seconds.
+Average Value: 15.54186
+Min Value: 6.28744
+Max Value: 26.49976
+Average Time: 2.75145 seconds
+Min Time: 2.71866 seconds
+Max Time: 2.92706 seconds

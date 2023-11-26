@@ -1,0 +1,206 @@
+5 dimensions:
+
+first IMPROVEMENT M: -4.45837
+Program executed in: 0.03013 seconds.
+first IMPROVEMENT M: -4.50177
+Program executed in: 0.03368 seconds.
+first IMPROVEMENT M: -3.82142
+Program executed in: 0.02495 seconds.
+first IMPROVEMENT M: -4.51640
+Program executed in: 0.02950 seconds.
+first IMPROVEMENT M: -4.15259
+Program executed in: 0.02396 seconds.
+first IMPROVEMENT M: -3.83953
+Program executed in: 0.02679 seconds.
+first IMPROVEMENT M: -4.19022
+Program executed in: 0.02553 seconds.
+first IMPROVEMENT M: -4.21321
+Program executed in: 0.02721 seconds.
+first IMPROVEMENT M: -4.15832
+Program executed in: 0.02623 seconds.
+first IMPROVEMENT M: -4.24855
+Program executed in: 0.02973 seconds.
+first IMPROVEMENT M: -4.01460
+Program executed in: 0.02664 seconds.
+first IMPROVEMENT M: -4.22500
+Program executed in: 0.02868 seconds.
+first IMPROVEMENT M: -4.46101
+Program executed in: 0.02663 seconds.
+first IMPROVEMENT M: -3.90388
+Program executed in: 0.02473 seconds.
+first IMPROVEMENT M: -4.19587
+Program executed in: 0.02794 seconds.
+first IMPROVEMENT M: -3.93628
+Program executed in: 0.02816 seconds.
+first IMPROVEMENT M: -3.83365
+Program executed in: 0.02492 seconds.
+first IMPROVEMENT M: -4.38974
+Program executed in: 0.02600 seconds.
+first IMPROVEMENT M: -4.37437
+Program executed in: 0.02949 seconds.
+first IMPROVEMENT M: -4.30173
+Program executed in: 0.02801 seconds.
+first IMPROVEMENT M: -4.22981
+Program executed in: 0.02429 seconds.
+first IMPROVEMENT M: -4.18456
+Program executed in: 0.02662 seconds.
+first IMPROVEMENT M: -4.36790
+Program executed in: 0.02149 seconds.
+first IMPROVEMENT M: -4.08277
+Program executed in: 0.02326 seconds.
+first IMPROVEMENT M: -3.93944
+Program executed in: 0.02524 seconds.
+first IMPROVEMENT M: -4.03087
+Program executed in: 0.02903 seconds.
+first IMPROVEMENT M: -4.16753
+Program executed in: 0.02354 seconds.
+first IMPROVEMENT M: -4.12965
+Program executed in: 0.02926 seconds.
+first IMPROVEMENT M: -3.87488
+Program executed in: 0.02708 seconds.
+first IMPROVEMENT M: -4.35421
+Program executed in: 0.02510 seconds.
+Average Value: -4.16994
+Min Value: -4.51640
+Max Value: -3.82142
+Average Time: 0.02679 seconds
+Min Time: 0.02149 seconds
+Max Time: 0.03368 seconds
+
+10 dimensions:
+
+FIRST IMPROVEMENT M: -7.92153
+Program executed in: 0.08088 seconds.
+FIRST IMPROVEMENT M: -7.79091
+Program executed in: 0.08562 seconds.
+FIRST IMPROVEMENT M: -7.90029
+Program executed in: 0.07759 seconds.
+FIRST IMPROVEMENT M: -7.71579
+Program executed in: 0.07970 seconds.
+FIRST IMPROVEMENT M: -7.85028
+Program executed in: 0.08932 seconds.
+FIRST IMPROVEMENT M: -8.05530
+Program executed in: 0.07973 seconds.
+FIRST IMPROVEMENT M: -8.20147
+Program executed in: 0.08195 seconds.
+FIRST IMPROVEMENT M: -8.54584
+Program executed in: 0.08043 seconds.
+FIRST IMPROVEMENT M: -8.47647
+Program executed in: 0.07492 seconds.
+FIRST IMPROVEMENT M: -7.64016
+Program executed in: 0.07144 seconds.
+FIRST IMPROVEMENT M: -8.38585
+Program executed in: 0.08743 seconds.
+FIRST IMPROVEMENT M: -7.03248
+Program executed in: 0.07596 seconds.
+FIRST IMPROVEMENT M: -8.51664
+Program executed in: 0.08873 seconds.
+FIRST IMPROVEMENT M: -8.32111
+Program executed in: 0.08795 seconds.
+FIRST IMPROVEMENT M: -8.51573
+Program executed in: 0.08248 seconds.
+FIRST IMPROVEMENT M: -8.14105
+Program executed in: 0.08448 seconds.
+FIRST IMPROVEMENT M: -8.18960
+Program executed in: 0.09408 seconds.
+FIRST IMPROVEMENT M: -7.72047
+Program executed in: 0.07589 seconds.
+FIRST IMPROVEMENT M: -8.53706
+Program executed in: 0.08434 seconds.
+FIRST IMPROVEMENT M: -8.70117
+Program executed in: 0.08447 seconds.
+FIRST IMPROVEMENT M: -8.00985
+Program executed in: 0.07877 seconds.
+FIRST IMPROVEMENT M: -7.82635
+Program executed in: 0.07757 seconds.
+FIRST IMPROVEMENT M: -7.72532
+Program executed in: 0.08230 seconds.
+FIRST IMPROVEMENT M: -7.18867
+Program executed in: 0.07117 seconds.
+FIRST IMPROVEMENT M: -7.94463
+Program executed in: 0.08122 seconds.
+FIRST IMPROVEMENT M: -8.46950
+Program executed in: 0.08103 seconds.
+FIRST IMPROVEMENT M: -7.94261
+Program executed in: 0.08859 seconds.
+FIRST IMPROVEMENT M: -8.12536
+Program executed in: 0.09145 seconds.
+FIRST IMPROVEMENT M: -8.08308
+Program executed in: 0.07997 seconds.
+FIRST IMPROVEMENT M: -8.31611
+Program executed in: 0.08476 seconds.
+Average Value: -8.05969
+Min Value: -8.70117
+Max Value: -7.03248
+Average Time: 0.08214 seconds
+Min Time: 0.07117 seconds
+Max Time: 0.09408 seconds
+
+30 dimensions:
+
+FIRST IMPROVEMENT M: -22.32951
+Program executed in: 0.53629 seconds.
+FIRST IMPROVEMENT M: -23.91172
+Program executed in: 0.55185 seconds.
+FIRST IMPROVEMENT M: -23.24696
+Program executed in: 0.51397 seconds.
+FIRST IMPROVEMENT M: -23.03474
+Program executed in: 0.60743 seconds.
+FIRST IMPROVEMENT M: -22.56327
+Program executed in: 0.48649 seconds.
+FIRST IMPROVEMENT M: -23.06708
+Program executed in: 0.54564 seconds.
+FIRST IMPROVEMENT M: -22.53546
+Program executed in: 0.46997 seconds.
+FIRST IMPROVEMENT M: -21.89868
+Program executed in: 0.51516 seconds.
+FIRST IMPROVEMENT M: -23.75474
+Program executed in: 0.63432 seconds.
+FIRST IMPROVEMENT M: -22.70810
+Program executed in: 0.45369 seconds.
+FIRST IMPROVEMENT M: -22.36957
+Program executed in: 0.65311 seconds.
+FIRST IMPROVEMENT M: -21.83682
+Program executed in: 0.56231 seconds.
+FIRST IMPROVEMENT M: -21.92718
+Program executed in: 0.57030 seconds.
+FIRST IMPROVEMENT M: -22.67303
+Program executed in: 0.55127 seconds.
+FIRST IMPROVEMENT M: -22.52232
+Program executed in: 0.50789 seconds.
+FIRST IMPROVEMENT M: -22.50911
+Program executed in: 0.59102 seconds.
+FIRST IMPROVEMENT M: -23.49874
+Program executed in: 0.52437 seconds.
+FIRST IMPROVEMENT M: -20.71319
+Program executed in: 0.49956 seconds.
+FIRST IMPROVEMENT M: -23.15863
+Program executed in: 0.47223 seconds.
+FIRST IMPROVEMENT M: -21.51437
+Program executed in: 0.40240 seconds.
+FIRST IMPROVEMENT M: -23.07871
+Program executed in: 0.58415 seconds.
+FIRST IMPROVEMENT M: -23.79740
+Program executed in: 0.55578 seconds.
+FIRST IMPROVEMENT M: -22.18102
+Program executed in: 0.52508 seconds.
+FIRST IMPROVEMENT M: -22.87398
+Program executed in: 0.60144 seconds.
+FIRST IMPROVEMENT M: -23.87769
+Program executed in: 0.57252 seconds.
+FIRST IMPROVEMENT M: -22.28691
+Program executed in: 0.56323 seconds.
+FIRST IMPROVEMENT M: -23.40348
+Program executed in: 0.53051 seconds.
+FIRST IMPROVEMENT M: -21.73328
+Program executed in: 0.54520 seconds.
+FIRST IMPROVEMENT M: -22.93073
+Program executed in: 0.62387 seconds.
+FIRST IMPROVEMENT M: -23.96036
+Program executed in: 0.64022 seconds.
+Average Value: -22.72989
+Min Value: -23.96036
+Max Value: -20.71319
+Average Time: 0.54637 seconds
+Min Time: 0.40240 seconds
+Max Time: 0.65311 seconds

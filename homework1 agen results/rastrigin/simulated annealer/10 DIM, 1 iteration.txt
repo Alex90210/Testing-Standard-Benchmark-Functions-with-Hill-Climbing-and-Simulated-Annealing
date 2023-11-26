@@ -1,0 +1,66 @@
+sim RASTRIGIN: 0.00003
+Program executed in: 2.29052 seconds.
+sim RASTRIGIN: 1.23592
+Program executed in: 2.31659 seconds.
+sim RASTRIGIN: 1.23584
+Program executed in: 2.31623 seconds.
+sim RASTRIGIN: 3.70840
+Program executed in: 2.32921 seconds.
+sim RASTRIGIN: 1.23586
+Program executed in: 2.32953 seconds.
+sim RASTRIGIN: 8.63112
+Program executed in: 2.29933 seconds.
+sim RASTRIGIN: 0.00002
+Program executed in: 2.47920 seconds.
+sim RASTRIGIN: 2.47170
+Program executed in: 2.37768 seconds.
+sim RASTRIGIN: 0.00002
+Program executed in: 2.33556 seconds.
+sim RASTRIGIN: 0.00002
+Program executed in: 2.31899 seconds.
+sim RASTRIGIN: 0.00003
+Program executed in: 2.32615 seconds.
+sim RASTRIGIN: 3.70785
+Program executed in: 2.39156 seconds.
+sim RASTRIGIN: 1.23587
+Program executed in: 2.41674 seconds.
+sim RASTRIGIN: 1.23591
+Program executed in: 2.32004 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.26733 seconds.
+sim RASTRIGIN: 0.00007
+Program executed in: 2.23970 seconds.
+sim RASTRIGIN: 1.23586
+Program executed in: 2.25483 seconds.
+sim RASTRIGIN: 1.23587
+Program executed in: 2.29988 seconds.
+sim RASTRIGIN: 1.23590
+Program executed in: 2.34693 seconds.
+sim RASTRIGIN: 1.23587
+Program executed in: 2.30017 seconds.
+sim RASTRIGIN: 3.70749
+Program executed in: 2.27556 seconds.
+sim RASTRIGIN: 2.47173
+Program executed in: 2.36190 seconds.
+sim RASTRIGIN: 1.23585
+Program executed in: 2.35804 seconds.
+sim RASTRIGIN: 3.70761
+Program executed in: 2.32102 seconds.
+sim RASTRIGIN: 1.23585
+Program executed in: 2.32377 seconds.
+sim RASTRIGIN: 1.23590
+Program executed in: 2.33716 seconds.
+sim RASTRIGIN: 1.23597
+Program executed in: 2.40659 seconds.
+sim RASTRIGIN: 0.00002
+Program executed in: 2.33215 seconds.
+sim RASTRIGIN: 0.00003
+Program executed in: 2.33980 seconds.
+sim RASTRIGIN: 0.00003
+Program executed in: 2.31827 seconds.
+Average Value: 1.48242
+Min Value: 0.00001
+Max Value: 8.63112
+Average Time: 2.33101 seconds
+Min Time: 2.23970 seconds
+Max Time: 2.47920 seconds

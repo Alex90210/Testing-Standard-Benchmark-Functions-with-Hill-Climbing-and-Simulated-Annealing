@@ -1,0 +1,206 @@
+5 dimensions:
+
+annealer M: -4.66658
+Program executed in: 1.56696 seconds.
+annealer M: -4.64354
+Program executed in: 1.52567 seconds.
+annealer M: -4.65418
+Program executed in: 1.50240 seconds.
+annealer M: -4.63976
+Program executed in: 1.43173 seconds.
+annealer M: -4.66927
+Program executed in: 1.47145 seconds.
+annealer M: -4.68765
+Program executed in: 1.50370 seconds.
+annealer M: -4.63976
+Program executed in: 1.63201 seconds.
+annealer M: -4.53764
+Program executed in: 1.50027 seconds.
+annealer M: -4.53706
+Program executed in: 1.45600 seconds.
+annealer M: -4.50822
+Program executed in: 1.54462 seconds.
+annealer M: -4.63975
+Program executed in: 1.44560 seconds.
+annealer M: -4.68325
+Program executed in: 1.57309 seconds.
+annealer M: -4.29026
+Program executed in: 1.47887 seconds.
+annealer M: -4.31472
+Program executed in: 1.45285 seconds.
+annealer M: -4.52098
+Program executed in: 1.43894 seconds.
+annealer M: -4.64417
+Program executed in: 1.48122 seconds.
+annealer M: -4.49478
+Program executed in: 1.51970 seconds.
+annealer M: -4.68518
+Program executed in: 1.43842 seconds.
+annealer M: -4.52038
+Program executed in: 1.51272 seconds.
+annealer M: -4.68325
+Program executed in: 1.44898 seconds.
+annealer M: -4.49527
+Program executed in: 1.43561 seconds.
+annealer M: -4.52254
+Program executed in: 1.50886 seconds.
+annealer M: -4.64149
+Program executed in: 1.50021 seconds.
+annealer M: -4.53325
+Program executed in: 1.48888 seconds.
+annealer M: -4.65246
+Program executed in: 1.45605 seconds.
+annealer M: -4.49529
+Program executed in: 1.43182 seconds.
+annealer M: -4.21161
+Program executed in: 1.42837 seconds.
+annealer M: -4.51852
+Program executed in: 1.56266 seconds.
+annealer M: -4.44789
+Program executed in: 1.50102 seconds.
+annealer M: -4.47612
+Program executed in: 1.41333 seconds.
+Average Value: -4.55516
+Min Value: -4.68765
+Max Value: -4.21161
+Average Time: 1.48840 seconds
+Min Time: 1.41333 seconds
+Max Time: 1.63201 seconds
+
+10 dimensions:
+
+annealer M: -9.12965
+Program executed in: 1.38061 seconds.
+annealer M: -8.81915
+Program executed in: 1.48573 seconds.
+annealer M: -8.75748
+Program executed in: 1.42375 seconds.
+annealer M: -8.74284
+Program executed in: 1.45506 seconds.
+annealer M: -9.07556
+Program executed in: 1.42161 seconds.
+annealer M: -9.38094
+Program executed in: 1.35879 seconds.
+annealer M: -8.66337
+Program executed in: 1.40268 seconds.
+annealer M: -8.94072
+Program executed in: 1.44037 seconds.
+annealer M: -9.03783
+Program executed in: 1.35056 seconds.
+annealer M: -9.08967
+Program executed in: 1.44018 seconds.
+annealer M: -9.01450
+Program executed in: 1.51270 seconds.
+annealer M: -9.08631
+Program executed in: 1.55116 seconds.
+annealer M: -8.97058
+Program executed in: 1.41266 seconds.
+annealer M: -8.72602
+Program executed in: 1.41243 seconds.
+annealer M: -8.41197
+Program executed in: 1.45889 seconds.
+annealer M: -8.58810
+Program executed in: 1.39562 seconds.
+annealer M: -9.21703
+Program executed in: 1.43598 seconds.
+annealer M: -8.85324
+Program executed in: 1.40130 seconds.
+annealer M: -8.94108
+Program executed in: 1.38833 seconds.
+annealer M: -9.03486
+Program executed in: 1.47588 seconds.
+annealer M: -8.91532
+Program executed in: 1.53591 seconds.
+annealer M: -9.13709
+Program executed in: 1.66579 seconds.
+annealer M: -9.36571
+Program executed in: 1.57041 seconds.
+annealer M: -8.78467
+Program executed in: 1.44522 seconds.
+annealer M: -8.83491
+Program executed in: 1.44337 seconds.
+annealer M: -9.23245
+Program executed in: 1.56496 seconds.
+annealer M: -9.06971
+Program executed in: 1.42469 seconds.
+annealer M: -9.06326
+Program executed in: 1.50012 seconds.
+annealer M: -8.92901
+Program executed in: 1.42649 seconds.
+annealer M: -8.61571
+Program executed in: 1.41256 seconds.
+Average Value: -8.94762
+Min Value: -9.38094
+Max Value: -8.41197
+Average Time: 1.45313 seconds
+Min Time: 1.35056 seconds
+Max Time: 1.66579 seconds
+
+30 dimensions:
+
+annealer M: -25.85581
+Program executed in: 1.59997 seconds.
+annealer M: -26.85851
+Program executed in: 1.61010 seconds.
+annealer M: -26.07300
+Program executed in: 1.87693 seconds.
+annealer M: -25.39978
+Program executed in: 1.64864 seconds.
+annealer M: -25.42594
+Program executed in: 1.71307 seconds.
+annealer M: -26.82061
+Program executed in: 1.66102 seconds.
+annealer M: -26.32984
+Program executed in: 1.59412 seconds.
+annealer M: -26.08447
+Program executed in: 1.61191 seconds.
+annealer M: -26.06527
+Program executed in: 1.63389 seconds.
+annealer M: -25.58544
+Program executed in: 1.61120 seconds.
+annealer M: -25.93085
+Program executed in: 1.74552 seconds.
+annealer M: -27.12569
+Program executed in: 1.62424 seconds.
+annealer M: -25.04114
+Program executed in: 1.75172 seconds.
+annealer M: -26.01136
+Program executed in: 1.60808 seconds.
+annealer M: -26.61740
+Program executed in: 1.57530 seconds.
+annealer M: -24.63070
+Program executed in: 1.60191 seconds.
+annealer M: -25.95086
+Program executed in: 1.58011 seconds.
+annealer M: -26.78529
+Program executed in: 1.59944 seconds.
+annealer M: -24.42465
+Program executed in: 1.69806 seconds.
+annealer M: -25.89378
+Program executed in: 1.69993 seconds.
+annealer M: -27.45690
+Program executed in: 1.68011 seconds.
+annealer M: -26.06277
+Program executed in: 1.62123 seconds.
+annealer M: -26.72567
+Program executed in: 1.50057 seconds.
+annealer M: -25.55944
+Program executed in: 1.56699 seconds.
+annealer M: -26.46576
+Program executed in: 1.42816 seconds.
+annealer M: -25.25399
+Program executed in: 1.63555 seconds.
+annealer M: -24.76382
+Program executed in: 1.61731 seconds.
+annealer M: -26.75117
+Program executed in: 1.67338 seconds.
+annealer M: -25.69231
+Program executed in: 1.68782 seconds.
+annealer M: -26.68874
+Program executed in: 1.57727 seconds.
+Average Value: -26.01103
+Min Value: -27.45690
+Max Value: -24.42465
+Average Time: 1.63445 seconds
+Min Time: 1.42816 seconds
+Max Time: 1.87693 seconds

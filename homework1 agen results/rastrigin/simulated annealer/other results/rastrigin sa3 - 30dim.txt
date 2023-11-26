@@ -1,0 +1,66 @@
+sim RASTRIGIN: 32.03924
+Program executed in: 15.19624 seconds.
+sim RASTRIGIN: 30.35703
+Program executed in: 15.34078 seconds.
+sim RASTRIGIN: 28.40160
+Program executed in: 15.27572 seconds.
+sim RASTRIGIN: 27.87022
+Program executed in: 15.26837 seconds.
+sim RASTRIGIN: 26.85086
+Program executed in: 15.33407 seconds.
+sim RASTRIGIN: 25.87189
+Program executed in: 15.37906 seconds.
+sim RASTRIGIN: 23.66691
+Program executed in: 15.24091 seconds.
+sim RASTRIGIN: 26.77604
+Program executed in: 19.41432 seconds.
+sim RASTRIGIN: 29.59628
+Program executed in: 25.33641 seconds.
+sim RASTRIGIN: 20.64139
+Program executed in: 35.41902 seconds.
+sim RASTRIGIN: 28.84641
+Program executed in: 34.61992 seconds.
+sim RASTRIGIN: 26.60734
+Program executed in: 15.24413 seconds.
+sim RASTRIGIN: 28.80746
+Program executed in: 15.34398 seconds.
+sim RASTRIGIN: 29.92777
+Program executed in: 15.61241 seconds.
+sim RASTRIGIN: 25.43194
+Program executed in: 15.19548 seconds.
+sim RASTRIGIN: 30.79259
+Program executed in: 26.51958 seconds.
+sim RASTRIGIN: 30.86248
+Program executed in: 36.28216 seconds.
+sim RASTRIGIN: 24.85288
+Program executed in: 35.65531 seconds.
+sim RASTRIGIN: 33.36806
+Program executed in: 18.30621 seconds.
+sim RASTRIGIN: 30.64174
+Program executed in: 15.52409 seconds.
+sim RASTRIGIN: 25.95654
+Program executed in: 15.51519 seconds.
+sim RASTRIGIN: 22.01078
+Program executed in: 15.49544 seconds.
+sim RASTRIGIN: 33.02355
+Program executed in: 16.17286 seconds.
+sim RASTRIGIN: 29.37832
+Program executed in: 16.10860 seconds.
+sim RASTRIGIN: 30.27304
+Program executed in: 15.51155 seconds.
+sim RASTRIGIN: 29.09737
+Program executed in: 15.47599 seconds.
+sim RASTRIGIN: 23.92838
+Program executed in: 15.65843 seconds.
+sim RASTRIGIN: 34.45893
+Program executed in: 15.67296 seconds.
+sim RASTRIGIN: 29.87558
+Program executed in: 15.41278 seconds.
+sim RASTRIGIN: 30.72332
+Program executed in: 15.34564 seconds.
+Average Value: 28.36453
+Min Value: 20.64139
+Max Value: 34.45893
+Average Time: 19.06259 seconds
+Min Time: 15.19548 seconds
+Max Time: 36.28216 seconds

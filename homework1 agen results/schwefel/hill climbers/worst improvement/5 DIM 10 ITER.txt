@@ -1,0 +1,206 @@
+5 dimensions:
+
+WORST IMPROVEMENT SCHWEFELS: -1945.36358
+Program executed in: 0.09500 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1907.89478
+Program executed in: 0.08874 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1975.67532
+Program executed in: 0.08808 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1942.23479
+Program executed in: 0.08622 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1907.20450
+Program executed in: 0.08678 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1792.17403
+Program executed in: 0.08976 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1845.45651
+Program executed in: 0.09026 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1941.64634
+Program executed in: 0.08869 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1856.20967
+Program executed in: 0.08760 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1976.26750
+Program executed in: 0.08693 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1833.76248
+Program executed in: 0.09083 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1941.44022
+Program executed in: 0.08450 seconds.
+WORST IMPROVEMENT SCHWEFELS: -2060.57439
+Program executed in: 0.09101 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1845.24963
+Program executed in: 0.08922 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1929.65912
+Program executed in: 0.09079 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1860.54119
+Program executed in: 0.09191 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1975.77901
+Program executed in: 0.08738 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1739.00108
+Program executed in: 0.08809 seconds.
+WORST IMPROVEMENT SCHWEFELS: -2094.80951
+Program executed in: 0.08662 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1908.00401
+Program executed in: 0.09356 seconds.
+WORST IMPROVEMENT SCHWEFELS: -2033.69139
+Program executed in: 0.08619 seconds.
+WORST IMPROVEMENT SCHWEFELS: -2026.33867
+Program executed in: 0.08600 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1963.79178
+Program executed in: 0.09225 seconds.
+WORST IMPROVEMENT SCHWEFELS: -2060.47071
+Program executed in: 0.08451 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1915.24812
+Program executed in: 0.08954 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1972.14291
+Program executed in: 0.08697 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1873.65967
+Program executed in: 0.08628 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1941.64777
+Program executed in: 0.08956 seconds.
+WORST IMPROVEMENT SCHWEFELS: -1832.66852
+Program executed in: 0.09102 seconds.
+WORST IMPROVEMENT SCHWEFELS: -2060.57501
+Program executed in: 0.08123 seconds.
+Average Value: -1931.97274
+Min Value: -2094.80951
+Max Value: -1739.00108
+Average Time: 0.08852 seconds
+Min Time: 0.08123 seconds
+Max Time: 0.09500 seconds
+
+10 dimensions:
+
+WORST IMPROVEMENT SCHWEFELS: -3905.92071
+Program executed in: 0.53274 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3452.78753
+Program executed in: 0.49754 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3701.07338
+Program executed in: 0.48899 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3715.16550
+Program executed in: 0.51659 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3798.65489
+Program executed in: 0.51995 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3684.23986
+Program executed in: 0.53077 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3667.52856
+Program executed in: 0.53405 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3768.33416
+Program executed in: 0.52988 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3690.49338
+Program executed in: 0.51785 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3511.75771
+Program executed in: 0.54343 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3552.83514
+Program executed in: 0.53468 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3615.27404
+Program executed in: 0.54675 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3561.55608
+Program executed in: 0.51793 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3646.41220
+Program executed in: 0.52965 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3465.21897
+Program executed in: 0.52933 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3832.78963
+Program executed in: 0.49248 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3480.62024
+Program executed in: 0.54738 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3781.46290
+Program executed in: 0.54161 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3671.65952
+Program executed in: 0.51356 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3655.05652
+Program executed in: 0.53095 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3518.59529
+Program executed in: 0.51726 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3718.47465
+Program executed in: 0.50137 seconds.
+WORST IMPROVEMENT SCHWEFELS: -4086.70634
+Program executed in: 0.49540 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3940.15615
+Program executed in: 0.50397 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3740.77066
+Program executed in: 0.51806 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3581.83317
+Program executed in: 0.49819 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3699.69099
+Program executed in: 0.56222 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3767.84935
+Program executed in: 0.55861 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3717.67560
+Program executed in: 0.54739 seconds.
+WORST IMPROVEMENT SCHWEFELS: -3853.05225
+Program executed in: 0.55663 seconds.
+Average Value: -3692.78818
+Min Value: -4086.70634
+Max Value: -3452.78753
+Average Time: 0.52517 seconds
+Min Time: 0.48899 seconds
+Max Time: 0.56222 seconds
+
+30 dimensions:
+
+WORST IMPROVEMENT SCHWEFELS: -10382.55593
+Program executed in: 10.25858 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10345.49156
+Program executed in: 10.20613 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10782.86680
+Program executed in: 10.05186 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10621.10784
+Program executed in: 10.16195 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10731.01774
+Program executed in: 10.08962 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10272.83053
+Program executed in: 10.01505 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10662.66510
+Program executed in: 10.09837 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10534.49124
+Program executed in: 9.76873 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10721.59638
+Program executed in: 10.38021 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10397.32149
+Program executed in: 10.16548 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10560.77244
+Program executed in: 9.59578 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10802.99857
+Program executed in: 10.22105 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10803.48759
+Program executed in: 10.84585 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10842.02999
+Program executed in: 10.43909 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10937.89202
+Program executed in: 10.22153 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10815.30099
+Program executed in: 10.03882 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10851.95322
+Program executed in: 10.05568 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10375.66625
+Program executed in: 10.41149 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10749.72480
+Program executed in: 10.21291 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10189.87051
+Program executed in: 10.11737 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10672.15586
+Program executed in: 10.17821 seconds.
+WORST IMPROVEMENT SCHWEFELS: -11004.20054
+Program executed in: 9.93992 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10504.86129
+Program executed in: 9.83923 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10141.52306
+Program executed in: 10.65510 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10939.01294
+Program executed in: 10.75862 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10689.53312
+Program executed in: 10.45166 seconds.
+WORST IMPROVEMENT SCHWEFELS: -11053.27588
+Program executed in: 10.51554 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10671.15071
+Program executed in: 10.09726 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10222.60314
+Program executed in: 10.65585 seconds.
+WORST IMPROVEMENT SCHWEFELS: -10860.65501
+Program executed in: 10.63629 seconds.
+Average Value: -10638.02042
+Min Value: -11053.27588
+Max Value: -10141.52306
+Average Time: 10.23611 seconds
+Min Time: 9.59578 seconds
+Max Time: 10.84585 seconds

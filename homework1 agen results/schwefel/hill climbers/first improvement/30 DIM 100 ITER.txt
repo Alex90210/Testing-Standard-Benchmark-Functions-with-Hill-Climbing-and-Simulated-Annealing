@@ -1,0 +1,66 @@
+FIRST IMPROVEMENT SCHWEFELS: -9537.89472
+Program executed in: 1.24110 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9468.36705
+Program executed in: 1.05870 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9534.67109
+Program executed in: 1.06623 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9277.85585
+Program executed in: 0.93199 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9759.90700
+Program executed in: 0.85142 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9318.70819
+Program executed in: 1.08322 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9631.38161
+Program executed in: 1.25377 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9318.09051
+Program executed in: 1.16163 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9406.92392
+Program executed in: 0.76774 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -10037.99836
+Program executed in: 0.93979 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9767.99318
+Program executed in: 1.43038 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9277.29463
+Program executed in: 1.15543 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9422.03743
+Program executed in: 1.09341 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9623.26839
+Program executed in: 0.90283 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -10452.97991
+Program executed in: 0.89738 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9830.52276
+Program executed in: 0.80384 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9394.63573
+Program executed in: 0.84716 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -10058.87427
+Program executed in: 0.93141 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9181.63728
+Program executed in: 1.04560 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9470.37753
+Program executed in: 1.17013 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9514.31314
+Program executed in: 0.62043 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9257.18189
+Program executed in: 0.95520 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9352.88366
+Program executed in: 0.94516 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9360.82302
+Program executed in: 1.03497 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9582.80164
+Program executed in: 1.09150 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9387.74119
+Program executed in: 0.96495 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9451.78241
+Program executed in: 1.12221 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9310.22413
+Program executed in: 0.98356 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9280.11732
+Program executed in: 0.80756 seconds.
+FIRST IMPROVEMENT SCHWEFELS: -9745.44670
+Program executed in: 1.11462 seconds.
+Average Value: -9533.82448
+Min Value: -10452.97991
+Max Value: -9181.63728
+Average Time: 1.00911 seconds
+Min Time: 0.62043 seconds
+Max Time: 1.43038 seconds

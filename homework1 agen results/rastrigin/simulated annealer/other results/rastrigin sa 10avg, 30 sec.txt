@@ -1,0 +1,67 @@
+
+sim RASTRIGIN: 9.67862
+Program executed in: 32.25358 seconds.
+sim RASTRIGIN: 9.65952
+Program executed in: 32.44147 seconds.
+sim RASTRIGIN: 8.92540
+Program executed in: 32.85525 seconds.
+sim RASTRIGIN: 6.71371
+Program executed in: 32.36547 seconds.
+sim RASTRIGIN: 7.95051
+Program executed in: 32.35062 seconds.
+sim RASTRIGIN: 14.11183
+Program executed in: 32.30526 seconds.
+sim RASTRIGIN: 11.16824
+Program executed in: 32.60550 seconds.
+sim RASTRIGIN: 10.28143
+Program executed in: 32.25108 seconds.
+sim RASTRIGIN: 8.19436
+Program executed in: 32.15413 seconds.
+sim RASTRIGIN: 8.43519
+Program executed in: 32.14205 seconds.
+sim RASTRIGIN: 9.04659
+Program executed in: 32.64261 seconds.
+sim RASTRIGIN: 10.70953
+Program executed in: 39.16571 seconds.
+sim RASTRIGIN: 12.40744
+Program executed in: 46.96490 seconds.
+sim RASTRIGIN: 7.49289
+Program executed in: 49.52652 seconds.
+sim RASTRIGIN: 11.41526
+Program executed in: 32.50765 seconds.
+sim RASTRIGIN: 9.42724
+Program executed in: 32.08087 seconds.
+sim RASTRIGIN: 7.80793
+Program executed in: 38.92514 seconds.
+sim RASTRIGIN: 13.60963
+Program executed in: 31.94384 seconds.
+sim RASTRIGIN: 8.92886
+Program executed in: 31.98223 seconds.
+sim RASTRIGIN: 13.10822
+Program executed in: 31.95263 seconds.
+sim RASTRIGIN: 7.70269
+Program executed in: 31.92684 seconds.
+sim RASTRIGIN: 11.67554
+Program executed in: 31.95075 seconds.
+sim RASTRIGIN: 11.40874
+Program executed in: 31.96482 seconds.
+sim RASTRIGIN: 10.60130
+Program executed in: 33.07531 seconds.
+sim RASTRIGIN: 9.45292
+Program executed in: 32.77200 seconds.
+sim RASTRIGIN: 12.17125
+Program executed in: 37.35928 seconds.
+sim RASTRIGIN: 13.67973
+Program executed in: 35.15909 seconds.
+sim RASTRIGIN: 10.26761
+Program executed in: 42.54331 seconds.
+sim RASTRIGIN: 9.69811
+Program executed in: 32.37715 seconds.
+sim RASTRIGIN: 9.94511
+Program executed in: 32.20930 seconds.
+Average Value: 10.18918
+Min Value: 6.71371
+Max Value: 14.11183
+Average Time: 34.42515 seconds
+Min Time: 31.92684 seconds
+Max Time: 49.52652 seconds

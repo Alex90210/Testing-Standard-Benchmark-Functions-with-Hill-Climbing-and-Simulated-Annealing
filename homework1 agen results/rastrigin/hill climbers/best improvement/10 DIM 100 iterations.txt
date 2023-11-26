@@ -1,0 +1,68 @@
+best improvement RASTRIGIN: 6.46251
+Program executed in: 1.66449 seconds.
+best improvement RASTRIGIN: 2.47241
+Program executed in: 1.65624 seconds.
+best improvement RASTRIGIN: 4.97993
+Program executed in: 1.64475 seconds.
+best improvement RASTRIGIN: 5.46242
+Program executed in: 1.63615 seconds.
+best improvement RASTRIGIN: 5.70880
+Program executed in: 1.64531 seconds.
+best improvement RASTRIGIN: 6.46252
+Program executed in: 1.62143 seconds.
+best improvement RASTRIGIN: 5.45729
+Program executed in: 1.64142 seconds.
+best improvement RASTRIGIN: 6.69349
+Program executed in: 1.70110 seconds.
+best improvement RASTRIGIN: 5.46242
+Program executed in: 1.75666 seconds.
+best improvement RASTRIGIN: 6.70376
+Program executed in: 1.81141 seconds.
+best improvement RASTRIGIN: 7.45748
+Program executed in: 1.71003 seconds.
+best improvement RASTRIGIN: 5.69853
+Program executed in: 1.72962 seconds.
+best improvement RASTRIGIN: 6.23154
+Program executed in: 1.67948 seconds.
+best improvement RASTRIGIN: 5.46242
+Program executed in: 1.67944 seconds.
+best improvement RASTRIGIN: 9.17617
+Program executed in: 1.65015 seconds.
+best improvement RASTRIGIN: 5.70367
+Program executed in: 1.66130 seconds.
+best improvement RASTRIGIN: 6.45738
+Program executed in: 1.64841 seconds.
+best improvement RASTRIGIN: 4.22108
+Program executed in: 1.74002 seconds.
+best improvement RASTRIGIN: 9.69891
+Program executed in: 1.66972 seconds.
+best improvement RASTRIGIN: 9.38631
+Program executed in: 1.64148 seconds.
+best improvement RASTRIGIN: 6.45738
+Program executed in: 1.67335 seconds.
+best improvement RASTRIGIN: 5.22118
+Program executed in: 1.66514 seconds.
+best improvement RASTRIGIN: 5.69853
+Program executed in: 1.66523 seconds.
+best improvement RASTRIGIN: 8.91409
+Program executed in: 1.65863 seconds.
+best improvement RASTRIGIN: 5.22118
+Program executed in: 1.64904 seconds.
+best improvement RASTRIGIN: 5.46756
+Program executed in: 1.65910 seconds.
+best improvement RASTRIGIN: 9.20615
+Program executed in: 1.62631 seconds.
+best improvement RASTRIGIN: 5.93977
+Program executed in: 1.68611 seconds.
+best improvement RASTRIGIN: 4.23135
+Program executed in: 1.69874 seconds.
+best improvement RASTRIGIN: 5.46756
+Program executed in: 1.83647 seconds.
+
+Average Value: 6.23946
+Min Value: 2.47241
+Max Value: 9.69891
+
+Average Time: 1.68022 seconds
+Min Time: 1.62143 seconds
+Max Time: 1.83647 seconds

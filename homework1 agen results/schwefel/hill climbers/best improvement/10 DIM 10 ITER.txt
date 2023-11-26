@@ -1,0 +1,66 @@
+BEST IMPROVEMENT SCHWEFELS: -3567.64745
+Program executed in: 0.47597 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3531.76233
+Program executed in: 0.49758 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3668.55706
+Program executed in: 0.43900 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3654.14552
+Program executed in: 0.42354 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3697.56528
+Program executed in: 0.39056 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3871.58227
+Program executed in: 0.41444 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3346.54824
+Program executed in: 0.42077 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3634.80357
+Program executed in: 0.44135 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3883.67255
+Program executed in: 0.41074 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3832.68534
+Program executed in: 0.38554 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3927.37588
+Program executed in: 0.39138 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3772.97484
+Program executed in: 0.40924 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3798.98762
+Program executed in: 0.42022 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3740.57010
+Program executed in: 0.39832 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3705.68297
+Program executed in: 0.39448 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3642.88452
+Program executed in: 0.40721 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3879.04421
+Program executed in: 0.41741 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3705.79124
+Program executed in: 0.43363 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3519.29157
+Program executed in: 0.43428 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3809.97998
+Program executed in: 0.39976 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3982.38065
+Program executed in: 0.41072 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3682.61942
+Program executed in: 0.41575 seconds.
+BEST IMPROVEMENT SCHWEFELS: -4009.75338
+Program executed in: 0.42732 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3797.55363
+Program executed in: 0.42224 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3618.58378
+Program executed in: 0.39191 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3658.97461
+Program executed in: 0.39765 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3656.47054
+Program executed in: 0.39406 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3913.17503
+Program executed in: 0.40821 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3918.40403
+Program executed in: 0.39199 seconds.
+BEST IMPROVEMENT SCHWEFELS: -3407.69347
+Program executed in: 0.40126 seconds.
+Average Value: -3727.90537
+Min Value: -4009.75338
+Max Value: -3346.54824
+Average Time: 0.41555 seconds
+Min Time: 0.38554 seconds
+Max Time: 0.49758 seconds

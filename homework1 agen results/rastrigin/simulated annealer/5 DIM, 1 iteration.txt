@@ -1,0 +1,206 @@
+5 dimensions:
+
+sim RASTRIGIN: 0.00000
+Program executed in: 2.20265 seconds.
+sim RASTRIGIN: 0.00000
+Program executed in: 2.14030 seconds.
+sim RASTRIGIN: 0.00000
+Program executed in: 2.18824 seconds.
+sim RASTRIGIN: 0.00000
+Program executed in: 2.18232 seconds.
+sim RASTRIGIN: 1.23584
+Program executed in: 2.16149 seconds.
+sim RASTRIGIN: 1.23584
+Program executed in: 2.13875 seconds.
+sim RASTRIGIN: 0.00000
+Program executed in: 2.18613 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.16350 seconds.
+sim RASTRIGIN: 0.00002
+Program executed in: 2.15142 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.15943 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.13733 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.17810 seconds.
+sim RASTRIGIN: 0.00000
+Program executed in: 2.19613 seconds.
+sim RASTRIGIN: 0.00000
+Program executed in: 2.21246 seconds.
+sim RASTRIGIN: 0.00000
+Program executed in: 2.21388 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.25132 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.21918 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.16158 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.16469 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.17934 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.16462 seconds.
+sim RASTRIGIN: 0.00000
+Program executed in: 2.18617 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.19369 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.17805 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.13672 seconds.
+sim RASTRIGIN: 1.23583
+Program executed in: 2.15737 seconds.
+sim RASTRIGIN: 0.00000
+Program executed in: 2.15471 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.14765 seconds.
+sim RASTRIGIN: 0.00002
+Program executed in: 2.12994 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.11141 seconds.
+Average Value: 0.12359
+Min Value: 0.00000
+Max Value: 1.23584
+Average Time: 2.17162 seconds
+Min Time: 2.11141 seconds
+Max Time: 2.25132 seconds
+
+10 dimensions:
+
+sim RASTRIGIN: 0.00003
+Program executed in: 2.29052 seconds.
+sim RASTRIGIN: 1.23592
+Program executed in: 2.31659 seconds.
+sim RASTRIGIN: 1.23584
+Program executed in: 2.31623 seconds.
+sim RASTRIGIN: 3.70840
+Program executed in: 2.32921 seconds.
+sim RASTRIGIN: 1.23586
+Program executed in: 2.32953 seconds.
+sim RASTRIGIN: 8.63112
+Program executed in: 2.29933 seconds.
+sim RASTRIGIN: 0.00002
+Program executed in: 2.47920 seconds.
+sim RASTRIGIN: 2.47170
+Program executed in: 2.37768 seconds.
+sim RASTRIGIN: 0.00002
+Program executed in: 2.33556 seconds.
+sim RASTRIGIN: 0.00002
+Program executed in: 2.31899 seconds.
+sim RASTRIGIN: 0.00003
+Program executed in: 2.32615 seconds.
+sim RASTRIGIN: 3.70785
+Program executed in: 2.39156 seconds.
+sim RASTRIGIN: 1.23587
+Program executed in: 2.41674 seconds.
+sim RASTRIGIN: 1.23591
+Program executed in: 2.32004 seconds.
+sim RASTRIGIN: 0.00001
+Program executed in: 2.26733 seconds.
+sim RASTRIGIN: 0.00007
+Program executed in: 2.23970 seconds.
+sim RASTRIGIN: 1.23586
+Program executed in: 2.25483 seconds.
+sim RASTRIGIN: 1.23587
+Program executed in: 2.29988 seconds.
+sim RASTRIGIN: 1.23590
+Program executed in: 2.34693 seconds.
+sim RASTRIGIN: 1.23587
+Program executed in: 2.30017 seconds.
+sim RASTRIGIN: 3.70749
+Program executed in: 2.27556 seconds.
+sim RASTRIGIN: 2.47173
+Program executed in: 2.36190 seconds.
+sim RASTRIGIN: 1.23585
+Program executed in: 2.35804 seconds.
+sim RASTRIGIN: 3.70761
+Program executed in: 2.32102 seconds.
+sim RASTRIGIN: 1.23585
+Program executed in: 2.32377 seconds.
+sim RASTRIGIN: 1.23590
+Program executed in: 2.33716 seconds.
+sim RASTRIGIN: 1.23597
+Program executed in: 2.40659 seconds.
+sim RASTRIGIN: 0.00002
+Program executed in: 2.33215 seconds.
+sim RASTRIGIN: 0.00003
+Program executed in: 2.33980 seconds.
+sim RASTRIGIN: 0.00003
+Program executed in: 2.31827 seconds.
+Average Value: 1.48242
+Min Value: 0.00001
+Max Value: 8.63112
+Average Time: 2.33101 seconds
+Min Time: 2.23970 seconds
+Max Time: 2.47920 seconds
+
+30 dimensions:
+
+sim ann ras: 14.11970
+Program executed in: 2.75926 seconds.
+sim ann ras: 21.03767
+Program executed in: 2.74127 seconds.
+sim ann ras: 14.94955
+Program executed in: 2.72744 seconds.
+sim ann ras: 12.88505
+Program executed in: 2.73541 seconds.
+sim ann ras: 15.88364
+Program executed in: 2.75657 seconds.
+sim ann ras: 18.30573
+Program executed in: 2.80359 seconds.
+sim ann ras: 9.20398
+Program executed in: 2.92706 seconds.
+sim ann ras: 8.71330
+Program executed in: 2.79338 seconds.
+sim ann ras: 26.49976
+Program executed in: 2.78488 seconds.
+sim ann ras: 13.41973
+Program executed in: 2.73325 seconds.
+sim ann ras: 9.90857
+Program executed in: 2.75413 seconds.
+sim ann ras: 16.68965
+Program executed in: 2.73029 seconds.
+sim ann ras: 9.19688
+Program executed in: 2.72395 seconds.
+sim ann ras: 12.11483
+Program executed in: 2.73718 seconds.
+sim ann ras: 9.98152
+Program executed in: 2.72400 seconds.
+sim ann ras: 16.33484
+Program executed in: 2.74296 seconds.
+sim ann ras: 23.72268
+Program executed in: 2.72742 seconds.
+sim ann ras: 16.61901
+Program executed in: 2.73895 seconds.
+sim ann ras: 19.07652
+Program executed in: 2.76891 seconds.
+sim ann ras: 18.56666
+Program executed in: 2.74385 seconds.
+sim ann ras: 15.50252
+Program executed in: 2.71866 seconds.
+sim ann ras: 15.10043
+Program executed in: 2.73932 seconds.
+sim ann ras: 13.69408
+Program executed in: 2.73732 seconds.
+sim ann ras: 13.87076
+Program executed in: 2.74422 seconds.
+sim ann ras: 17.30479
+Program executed in: 2.74999 seconds.
+sim ann ras: 18.27734
+Program executed in: 2.73276 seconds.
+sim ann ras: 6.28744
+Program executed in: 2.75100 seconds.
+sim ann ras: 22.84825
+Program executed in: 2.73959 seconds.
+sim ann ras: 19.77331
+Program executed in: 2.73375 seconds.
+sim ann ras: 16.36756
+Program executed in: 2.74318 seconds.
+Average Value: 15.54186
+Min Value: 6.28744
+Max Value: 26.49976
+Average Time: 2.75145 seconds
+Min Time: 2.71866 seconds
+Max Time: 2.92706 seconds

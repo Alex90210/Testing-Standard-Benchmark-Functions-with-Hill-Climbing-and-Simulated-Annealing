@@ -1,0 +1,66 @@
+sim ann schwefel: -4189.20473
+Program executed in: 2.58601 seconds.
+sim ann schwefel: -4189.30912
+Program executed in: 2.54606 seconds.
+sim ann schwefel: -4189.20527
+Program executed in: 2.63289 seconds.
+sim ann schwefel: -4189.41349
+Program executed in: 2.57811 seconds.
+sim ann schwefel: -4189.20607
+Program executed in: 2.56722 seconds.
+sim ann schwefel: -4189.51592
+Program executed in: 2.53800 seconds.
+sim ann schwefel: -4189.72329
+Program executed in: 2.53411 seconds.
+sim ann schwefel: -4189.31040
+Program executed in: 2.53184 seconds.
+sim ann schwefel: -4189.51588
+Program executed in: 2.53622 seconds.
+sim ann schwefel: -4189.51655
+Program executed in: 2.53295 seconds.
+sim ann schwefel: -4189.51530
+Program executed in: 2.52442 seconds.
+sim ann schwefel: -4189.41222
+Program executed in: 2.52604 seconds.
+sim ann schwefel: -4189.20541
+Program executed in: 2.57835 seconds.
+sim ann schwefel: -4189.31046
+Program executed in: 2.53310 seconds.
+sim ann schwefel: -4189.61834
+Program executed in: 2.54663 seconds.
+sim ann schwefel: -4189.10121
+Program executed in: 2.53664 seconds.
+sim ann schwefel: -4189.41350
+Program executed in: 2.63324 seconds.
+sim ann schwefel: -4189.41349
+Program executed in: 2.55461 seconds.
+sim ann schwefel: -4189.20607
+Program executed in: 2.66329 seconds.
+sim ann schwefel: -4189.41075
+Program executed in: 2.67331 seconds.
+sim ann schwefel: -4189.51591
+Program executed in: 2.64027 seconds.
+sim ann schwefel: -4189.51718
+Program executed in: 2.62942 seconds.
+sim ann schwefel: -4189.51653
+Program executed in: 2.66187 seconds.
+sim ann schwefel: -4189.72329
+Program executed in: 2.56112 seconds.
+sim ann schwefel: -4189.30846
+Program executed in: 2.58965 seconds.
+sim ann schwefel: -4189.51582
+Program executed in: 2.58805 seconds.
+sim ann schwefel: -4189.51657
+Program executed in: 2.56214 seconds.
+sim ann schwefel: -4189.72140
+Program executed in: 2.56710 seconds.
+sim ann schwefel: -4189.10164
+Program executed in: 2.54917 seconds.
+sim ann schwefel: -4189.41410
+Program executed in: 2.56804 seconds.
+Average Value: -4189.41261
+Min Value: -4189.72329
+Max Value: -4189.10121
+Average Time: 2.57566 seconds
+Min Time: 2.52442 seconds
+Max Time: 2.67331 seconds

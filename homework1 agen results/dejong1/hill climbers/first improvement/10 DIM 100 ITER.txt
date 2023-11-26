@@ -1,0 +1,66 @@
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.07726 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.07603 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.07622 seconds.
+BEST IMPROVEMENT DE JONG: 0.10668
+Program executed in: 0.07514 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.07068 seconds.
+BEST IMPROVEMENT DE JONG: 0.00001
+Program executed in: 0.06585 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.06855 seconds.
+BEST IMPROVEMENT DE JONG: 0.01301
+Program executed in: 0.06842 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.06250 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.07284 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.08051 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.07042 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.07169 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.06974 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.06280 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.07704 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.07337 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.07597 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.06798 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.08884 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.06921 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.07476 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.07257 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.06964 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.06561 seconds.
+BEST IMPROVEMENT DE JONG: 0.00023
+Program executed in: 0.07384 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.08075 seconds.
+BEST IMPROVEMENT DE JONG: 0.00003
+Program executed in: 0.06516 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.06941 seconds.
+BEST IMPROVEMENT DE JONG: 0.00000
+Program executed in: 0.07994 seconds.
+Average Value: 0.00400
+Min Value: 0.00000
+Max Value: 0.10668
+Average Time: 0.07242 seconds
+Min Time: 0.06250 seconds
+Max Time: 0.08884 seconds
